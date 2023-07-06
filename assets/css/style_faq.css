@@ -1130,7 +1130,8 @@
 
 #faq .faq-list p {
   margin-bottom: 0;
-  padding: 10px 0 0 25px;
+  padding: 20px 0 0 25px;
+  line-height: 30px;
 }
 
 #faq .faq-list .icon-show {
@@ -1139,6 +1140,7 @@
 
 #faq .faq-list .collapsed {
   color: black;
+  line-height: 25px;
 }
 
 #faq .faq-list .collapsed:hover {
@@ -1154,6 +1156,82 @@
   display: none;
   transition: 0.6s;
 }
+
+
+
+/*--------------------------------------------------------------
+# support service Section
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# support service Section
+--------------------------------------------------------------*/
+#faq {
+  padding: 60px 0px;
+}
+
+#faq .faq-list_service {
+  padding: 0;
+  list-style: none;
+  text-align: left;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+#faq .faq-list_service li {
+  border-bottom: 1px solid #e9eaed;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+#faq .faq-list_service .question {
+  display: block;
+  position: relative;
+  font-family: #e60012;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+  padding-left: 25px;
+  cursor: pointer;
+  color: #e60012;
+  transition: 0.3s;
+}
+
+#faq .faq-list_service i {
+  font-size: 16px;
+  position: absolute;
+  left: 0;
+  top: -2px;
+}
+
+#faq .faq-list_service p {
+  margin-bottom: 0;
+  padding: 20px 0 0 25px;
+  line-height: 30px;
+}
+
+#faq .faq-list_service .icon-show {
+  display: none;
+}
+
+#faq .faq-list_service .collapsed {
+  color: black;
+  line-height: 25px;
+}
+
+#faq .faq-list_service .collapsed:hover {
+  color: #e60012;
+}
+
+#faq .faq-list_service .collapsed .icon-show {
+  display: inline-block;
+  transition: 0.6s;
+}
+
+#faq .faq-list_service .collapsed .icon-close {
+  display: none;
+  transition: 0.6s;
+}
+
 
 /*--------------------------------------------------------------
 # Subscribe Section
