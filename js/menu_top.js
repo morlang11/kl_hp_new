@@ -9,9 +9,9 @@ $(window).scroll(function(){
     if(scrollTop >= 100) { // 숫자에 따라 아래로 스크롤 했을 때 사라지는 영역의 크기가 바뀝니다.
         if ((scrollTop > lastScrollTop) && (lastScrollTop>0)) { /* &&: AND, 두 값이 모두 참이어야 값이 출력 */
             /* 화면에 나오지 않을 때: top값을 마이너스로 요소가 보이지 않게 사용해야함 */
-            $(".scroll_01").css("top","-200px");
+            $(".scroll_01").css("top","-100px");  
         } else {
-            $(".scroll_01").css("top","0px");
+            $(".scroll_01").css("top","0px"); $(".scroll_01").css("background" , "#ffffffe2");
         }
 
         lastScrollTop = scrollTop;
@@ -25,3 +25,19 @@ $(window).scroll(function(){
         }
     })
 });
+
+
+
+
+// 스크롤바 최상단 위치시 색상변화
+$(document).ready(function(){
+    $(window).scroll(function(){
+      var scroll = $(window).scrollTop();
+      if (scroll > 1) {
+        $(".scroll_01").css("background" , "#ffffffe2");
+      }
+      else{
+        $(".scroll_01").css("background" , "#ffffff00");   
+      }
+    })
+  })
