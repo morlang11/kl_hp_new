@@ -16,9 +16,11 @@
 /* 회사소개 페이지 최상단 텍스트 */
 
 .회사소개_main_text {
+  display: inline-block;
   font-size: 38px;
   font-weight: 600;
   color: #000000;
+  margin-top: 30%;
   margin-bottom: 10%;
   margin: 30px;
 }
@@ -106,6 +108,52 @@
 .cibi_intro_warm {
   font-size: 24px;
   font-weight: 700;
+}
+
+
+
+/* 사업소개 이미지 */
+.business_img{
+  text-align: right;
+  margin-right: 0%;
+}
+
+/* ci&bi*/
+.business_img_wrapper {
+  display: inline-block;
+}
+
+.business_img{
+  margin-top: 0%;
+  margin-right: 0%;
+}
+
+
+.business_sub_text {
+  max-width: 83%;
+  margin-left: 8%;
+  margin-top: 30px;
+  font-size: 15px;
+  line-height: 30px;
+  text-align: left;
+}
+
+.business_intro_warm {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+
+.business_img_wrapper {
+  overflow: hidden;
+}
+
+.business_img {
+  transition: transform 0.3s ease-in-out;
+}
+
+.business_img_wrapper:hover .business_img {
+  transform: scale(1.04);
 }
 
 
@@ -1145,13 +1193,27 @@ section {
 /*--------------------------------------------------------------
 # Alt Services Section
 --------------------------------------------------------------*/
+
+
 /* 회사소개 이미지 */
+.alt-services .img-bg2 {
+  background-size: cover;
+  background-position: center center;
+  width: 600px;
+  height: 500px;
+
+}
+
+
+/* 경영이념 이미지 */
 .alt-services .img-bg {
   background-size: cover;
   background-position: center center;
   min-height: 400px;
   margin-right: 5%;
 }
+
+
 
 .alt-services h3 {
   font-size: 28px;

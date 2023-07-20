@@ -1092,9 +1092,51 @@
 /*--------------------------------------------------------------
 # F.A.Q Section
 --------------------------------------------------------------*/
-#faq {
-  padding: 60px 0;
+
+/* 검색안됨 */
+.no-match-message{
+  display: none;
+  justify-content: center;
+  margin: 5%;
+  font-size: 20px;
+  font-weight: 400;
+  color: #717171;
 }
+
+/* 검색창 디자인 */
+.search-container {
+  display: inline-flex;
+  justify-items: flex-end;
+  justify-content: flex-end;
+  height: 40px;
+  width: 380px;
+  border: 1px solid #c00000;
+  background: #c00000;
+  margin-bottom: 2%;
+}
+
+input {
+  font-size: 16px;
+  width: 335px;
+  padding: 10px;
+  border: 0px;
+  outline: none;
+  float: left;
+}
+
+button {
+width: 50px;
+height: 100%;
+border: 0px;
+cursor: pointer;
+}
+
+
+#faq {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 
 #faq .faq-list {
   padding: 0;
@@ -1105,7 +1147,7 @@
 #faq .faq-list li {
   border-bottom: 1px solid #e9eaed;
   margin-bottom: 20px;
-  padding-bottom: 20px;
+  padding: 20px;
 }
 
 #faq .faq-list .question {
@@ -1158,79 +1200,88 @@
 }
 
 
-
-/*--------------------------------------------------------------
-# support service Section
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# support service Section
---------------------------------------------------------------*/
-#faq {
-  padding: 60px 0px;
-}
-
-#faq .faq-list_service {
-  padding: 0;
-  list-style: none;
-  text-align: left;
-  margin-left: 0;
-  margin-right: 0;
-}
-
-#faq .faq-list_service li {
-  border-bottom: 1px solid #e9eaed;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-}
-
-#faq .faq-list_service .question {
-  display: block;
-  position: relative;
-  font-family: #e60012;
-  font-size: 18px;
-  line-height: 24px;
-  font-weight: 400;
-  padding-left: 25px;
-  cursor: pointer;
-  color: #e60012;
-  transition: 0.3s;
-}
-
-#faq .faq-list_service i {
-  font-size: 16px;
-  position: absolute;
-  left: 0;
-  top: -2px;
-}
-
-#faq .faq-list_service p {
-  margin-bottom: 0;
-  padding: 20px 0 0 25px;
-  line-height: 30px;
-}
-
-#faq .faq-list_service .icon-show {
-  display: none;
-}
-
-#faq .faq-list_service .collapsed {
-  color: black;
-  line-height: 25px;
-}
-
-#faq .faq-list_service .collapsed:hover {
-  color: #e60012;
-}
-
-#faq .faq-list_service .collapsed .icon-show {
+/* faq 안에 내용 */
+/* 제품 설치 방법 그림 */
+.install_product{
   display: inline-block;
-  transition: 0.6s;
-}
+  justify-content: center;
+  margin-top: 20px;
+  }
+  
+  /* 제품 설치 방법 제목 */
+  span.install_product_text_main{
+    display: inline-block;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    font-size: 28px;
+    font-weight: 600;
+  }
+  
+  
+  span.install_product_text_sub{
+    font-size: 22px;
+    font-weight: 600;
+  }
+  
+  /* faq 카테고리 박스 */
+  .category .container4 {
+    width: 98%;
+    max-width: 98%;
+    margin: 0 auto;
+    margin-top: 1%;
+    }
+  
+    .tab_btn4 {
+    display: flex;
+    max-width: 1000px;
+    margin: 1em auto;
+    }
+    .tab_btn4 > li {
+    position: relative;
+    }
+    .tab_btn4 > li > a {
+    display: block;
+    text-align: center;
+    color: #6b6b6b;
+    }
+    .tab_btn4 > li > a.active {
+    font-weight: bold;
+    color: #c1c1c1;
+    }
+    .tab_btn4.tp-box > li {
+    flex: 1;
+    margin-left: -1px;
+    border: 1px solid #b1b1b1;
+    }
+    .tab_btn4.tp-box > li > a {
+    width: 100%;
+    padding: 0.9em 0.5em;
+    }
+    .tab_btn4.tp-box > li > a.active {
+    height: 100%;
+    background-color: #bdbdbd;
+    color: white;
+    }
+    .tab_btn4.tp-bar {
+    justify-content: center;
+    border-bottom: 1px solid #DDD;
+    }
+    .tab_btn4.tp-bar > li {
+    margin: 2em 0 1em;
+    border-left: 1px solid #DDD;
+    }
+    .tab_btn4.tp-bar > li:last-child {
+    border-right: 1px solid #DDD;
+    }
+    .tab_btn4.tp-bar > li > a {
+    padding: 0 2em;
+    }
+    .tab_btn4.tp-bar > li > a.active {
+    font-weight: bold;
+    font-size: 20px;
+    color: #b1b1b1;
+    }
 
-#faq .faq-list_service .collapsed .icon-close {
-  display: none;
-  transition: 0.6s;
-}
 
 
 /*--------------------------------------------------------------
