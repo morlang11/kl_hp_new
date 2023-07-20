@@ -49,7 +49,60 @@
 	<meta name="theme-color" content="#ffffff">
 	<!-- 파비콘 끝 -->
       </head>
+
+
+	  <script>
+		$(document).ready(function() {
+		  var activeCategory = $('.tab_btn a.active').data('filter');
+		  $('.main3 > div[data-filter="' + activeCategory + '"]').fadeIn(500); // 초기에 선택된 카테고리 페이드인 애니메이션으로 보이기
 	  
+		  $('.tab_btn a').on('click', function() {
+			var category = $(this).data('filter');
+			$('.main3 > div[data-filter]').hide(); // 모든 카테고리 숨기기
+			if (category === 'all') {
+			  $('.main3 > div[data-filter]').fadeIn(500); // 모든 데이터 페이드인 애니메이션으로 보이기
+			  $('.shop, .office').fadeIn(500); // shop과 office 클래스 페이드인 애니메이션으로 보이기
+			} else {
+			  $('.main3 > div[data-filter="' + category + '"]').fadeIn(500); // 선택한 카테고리 페이드인 애니메이션으로 보이기
+
+			}
+			$('.tab_btn a').removeClass('active');
+			$(this).addClass('active');
+			$('.container3').show();
+			$('.main3').show();
+			$('.ceo_sign_img_wrapper').hide(); // 모든 이미지 숨기기
+			$('.main3 > div[data-filter="' + category + '"] .ceo_sign_img_wrapper').fadeIn(100).addClass('zoom-in'); // 선택한 카테고리의 이미지 페이드인 및 확대 애니메이션 효과 추가
+	  
+			return false;
+		  });
+	  
+		  $('.tab_btn a').click(function() {
+			$('.tab_btn4').show();
+		  });
+	  
+		  $('.container3').show();
+		  $('.main3').show();
+		});
+	  </script>
+
+	<style>
+.zoom-in {
+  animation-name: zoomIn;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+	</style>
 <body>
 	
 <!-- 상단 메뉴바 -->
@@ -74,7 +127,7 @@
 			</a>
 		</h1>
 
-		<li>
+		<li class="active">
 			<a href="./sub1-1.html">회사소개</a>
 			<ul class="gnb_sub">
 				<li><a href="./sub1-1.html">회사개요</a></li>
@@ -89,7 +142,7 @@
 				   <a href="./sub2-1.html">제품</a>
 				   <ul class="gnb_sub">
 					   <li><a href="./sub2-1.html">제품목록</a></li>
-					   <li><a href="./sub2-2.html">제품설치방법</a></li>
+					   <li><a href="./sub2-2.html">제품가이드</a></li>
 				   </ul>
 			   </li>
 
@@ -103,17 +156,18 @@
 			   </li>
 
 			   <li>
-				<a href="./sub4-1.html">고객지원</a>
-				<ul class="gnb_sub">
-					<li><a href="./sub4-1.html">AS전 확인사항</a></li>
-					<li><a href="./sub4-2.html">고객 지원 정책</a></li>
-					<li><a href="./sub4-3.html">AS센터 안내</a></li>
-				</ul>
-			</li>
+          <a href="./sub4-1.html">고객지원</a>
+          <ul class="gnb_sub">
+            <li><a href="./sub4-1.html">AS 안내</a></li>
+            <li><a href="./sub4-2.html">고객 지원 정책</a></li>
+            <!-- <li><a href="./sub4-3.html">AS센터 안내</a></li> -->
+				   </ul>
+			   </li>
 		   </ul>
 		 </div>
 		</div>
 	  <!-- 상단 메뉴바 끝 -->
+
 
 	  
 
@@ -121,33 +175,33 @@
 		<div class="quickmenu">
 			<ul>
 			  <li>
-				<a href="https://smartstore.naver.com/kleinz?">
+				<a href="https://smartstore.naver.com/kleinz" target="_blank">
 				<img src="./img/icon/icon_quick_01.png" width="" alt=""></a>
 			</li>
 			<li>
-				<a href="https://accounts.kakao.com/login/?continue=https://business.kakao.com/dashboard/?sid%3Dpfr#login">
+				<a href="https://accounts.kakao.com/login/?continue=https://business.kakao.com/dashboard/?sid%3Dpfr#login" target="_blank">
 				<img src="./img/icon/icon_quick_02.png" width="" alt=""></a>
 			</li>
 			<li>
-				<a href="tel:1644-9721">
+				<a href="tel:1644-9721" target="_blank">
 				<img src="./img/icon/icon_quick_03.png" width="" alt=""></a>
 			</li>
 			</ul>
 		  </div>
 		 <!-- 퀵메뉴 끝  -->
+		 
 
-
-  	  <!-- 상단 메인명 텍스트바 -->
-		<section class="category_text_area_1">
-			<div class="container">
-			  <div class="row">
-				<div class="col-md-12_main_회사소개_bar">
-					<div class="company_intro_sub_black">오시는길</div>
-					<div class="company_intro2_sub_black">주식회사 클라인즈의<br>각 지점 오시는 길</div>
-				</div>
-			  </div>
-			</div>
-		  </section>
+<!-- 상단 메인명 텍스트바 -->
+<section class="category_text_area_1">
+	<div class="container">
+	  <div class="row">
+		<div class="col-md-12_main_회사소개_bar">
+		  <div class="company_intro_sub_black">회사소개</div>
+		  <div class="company_intro2_sub_black">신뢰, 도전, 나눔, 인재라는 경영이념으로<br>세계 최고의 전자기업이 되도록 노력하겠습니다.</div>
+		</div>
+	  </div>
+	</div>
+  </section>
 
 
 		        <!-- ======= 서브페이지 상단 페이지 경로 ======= -->
@@ -180,26 +234,41 @@
 	  </section><!-- 서브페이지 상단 페이지 경로-->
 
 
+
+
+
+      <!-- 카테고리 분류 신규-->
+	  <div class="main3">
+        <h3 class="page_title"></h3>
+        <div class="container4">
+            <ul class="tab_btn tp-box">
+				<li><a href="#" class="active" data-filter="all">전체</a></li>
+                <li><a href="#" data-filter="company">클라인즈 본사</a></li>
+                <li><a href="#" data-filter="shop">클라인즈 오프라인 매장</a></li>
+				<li><a href="#" data-filter="office">클라인즈 서울사무소</a></li>
+            </ul>
+        </div>
+
+
+
+
+
+	  <!-- 본사 -->
+	 <div class="company" data-filter="company">
   <div class="회사소개_main_text">클라인즈 본사</div>
   <div class=".ceo_sign_img_wrapper">
 	<div class="street_img_company"></div>
 		<img src="img/street_img_company.jpg" class="img-fluid" alt=""  data-aos="zoom-in" data-aos-delay="200"></div>
 
   
-  <div class="회사소개_sub_text">
- 자동화 제조라인을 통한 안정적인 생산 가능한 인프라 구축과 넓고 쾌적한 대형 물류 창고를 보유한 대형 공장입니다.
-  </div>
+		<div class="회사소개_sub_text">
+			모든게 빠르게 변화하는 시대에 인간과 함께하는 가전기구들도 하루가 다르게 진화하고 있습니다.
+			하지만 모든 가전기구 그 본연의 본질 기능은 크게 바뀌지 않는다고 생각합니다.
+			그래서 기본에 충실하며 인간에게 따뜻한 배려를 더하고자 클라인즈를 통해 실현하고자 합니다.
+			인간생활에 따뜻한 배려를 제공하는 기업으로 늘 함께 하도록 노력하겠습니다.
+		  </div>
 
-      <!-- 카테고리 분류 -->
-	  <div class="main3">
-        <h3 class="page_title"></h3>
-        <div class="container3">
-            <ul class="tab_btn tp-box">
-                <li><a href="./sub1-4.html" class="active">클라인즈 본사</a></li>
-                <li><a href="./sub1-5.html">클라인즈 오프라인 매장</a></li>
-				<li><a href="./sub1-6.html">클라인즈 서울사무소</a></li>
-            </ul>
-        </div>
+
 
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
@@ -220,7 +289,99 @@
 							   <div class="adress_icon" data-aos="fade-up" data-aos-delay="300"><img src="img/adress_icons_fax.png" class="" alt=""><p>02-857-9721</p></div>
 				  </div>	  
 			</section>
-	  </section><!-- End Contact Section -->
+	  </section>
+	</div>
+	  <!-- End Contact Section -->
+
+
+
+
+
+
+<!-- 오프라인 매장 -->
+<div class="shop" data-filter="shop">
+	  <div class="회사소개_main_text">클라인즈 오프라인 매장</div>
+	  <div class=".ceo_sign_img_wrapper">
+		<div class="street_img_company"></div>
+			<img src="img/street_img_shop.jpg" class="img-fluid" alt=""></div>
+	
+	  
+	  <div class="회사소개_sub_text">
+		클라인즈의 제품을 직접 보고 만지고 느낄 수 있도록 새롭게 전시 매장을 활짝 열었습니다.
+		용산역, 신용산역 하차 후 나진상가를 찾아주세요.
+	</div>
+	
+
+		<!-- ======= Contact Section ======= -->
+		<section id="contact" class="contact">
+			<div class="container">
+			  <div class="section-title">
+			  </div>
+			  <div>
+	
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d235.15790316042296!2d126.96531354815052!3d37.53397224849507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca21aaed11cb5%3A0xc7ea69c65e922358!2z7ISc7Jq47Yq567OE7IucIOyaqeyCsOq1rCDssq3tjIzroZwgMTI1!5e0!3m2!1sko!2skr!4v1688448919539!5m2!1sko!2skr"
+				width="100%" height="270PX" style="border:0;"
+				allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+				</iframe></div>
+				
+	
+				<section>
+					<div class="container" >
+								   <div class="adress_icon"><img src="img/adress_icons_map.png" class="" alt="" ><p>서울 용산구 청파로125 나진상가 17동 가열 143호</p></div>
+								   <div class="adress_icon"><img src="img/adress_icons_call.png" class="" alt=""><p>02-712-6788</p></div>
+								   <!--<div class="adress_icon" data-aos="fade-up" data-aos-delay="300"><img src="img/adress_icons_fax.png" class="" alt=""><p>02-857-9721</p></div>-->
+					  </div>	  
+				</section>
+		  </section>
+			</div> 
+		  <!-- End Contact Section -->
+
+
+
+
+
+			<!-- 서울사무소 -->
+			<div class="office" data-filter="office">
+		  <div class="회사소개_main_text">클라인즈 서울사무소</div>
+		<div class=".ceo_sign_img_wrapper">
+		<div class="street_img_company"></div>
+			<img src="img/street_img_office.jpg" class="img-fluid" alt="" ></div>
+
+  
+		<div class="회사소개_sub_text">
+		전국 어디서든 걱정하지말고 전화주세요. 전국 서비스망으로 어디서나 A/S가 가능합니다.
+		</div>
+
+
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+		<div class="container">
+		  <div class="section-title" data-aos="zoom-in">
+		  </div>
+		  <div>
+
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3166.6576415870477!2d126.88489987723577!3d37.46880452972389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b61e85eae438f%3A0x3fbd107239689ee8!2z7ISc7Jq47Yq567OE7IucIOq4iOyynOq1rCDqsIDsgrDrlJTsp4DthLgx66GcIDMw!5e0!3m2!1sko!2skr!4v1688452915800!5m2!1sko!2skr"
+			width="100%" height="270PX" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+			</iframe></div>
+			
+
+			<section>
+				<div class="container" >
+							   <div class="adress_icon"><img src="img/adress_icons_map.png" class="" alt="" ><p>서울특별시 금천구 가산디지털1로 30</p></div>
+							   <div class="adress_icon"><img src="img/adress_icons_call.png" class="" alt=""><p>1644-9721</p></div>
+							   <!--<div class="adress_icon" data-aos="fade-up" data-aos-delay="300"><img src="img/adress_icons_fax.png" class="" alt=""><p>02-857-9721</p></div>-->
+				  </div>	  
+			</section>
+	  </section>
+	</div>
+	<!-- End Contact Section -->
+
+
+
+
+		  
 
 
 

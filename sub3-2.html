@@ -27,7 +27,8 @@
     <!-- 스크롤애니메이션    -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-	
+	  <!-- 아이콘 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 
   <!-- Vendor CSS Files -->
@@ -105,11 +106,11 @@
 				   <a href="./sub2-1.html">제품</a>
 				   <ul class="gnb_sub">
 					   <li><a href="./sub2-1.html">제품목록</a></li>
-					   <li><a href="./sub2-2.html">제품설치방법</a></li>
+					   <li><a href="./sub2-2.html">제품가이드</a></li>
 				   </ul>
 			   </li>
 
-			   <li>
+			   <li class="active">
 				   <a href="./sub3-1.html">커뮤니티</a>
 				   <ul class="gnb_sub">
 				   <li><a href="./sub3-1.html">공지사항</a></li>
@@ -121,9 +122,9 @@
 			   <li>
           <a href="./sub4-1.html">고객지원</a>
           <ul class="gnb_sub">
-            <li><a href="./sub4-1.html">AS전 확인사항</a></li>
+            <li><a href="./sub4-1.html">AS 안내</a></li>
             <li><a href="./sub4-2.html">고객 지원 정책</a></li>
-            <li><a href="./sub4-3.html">AS센터 안내</a></li>
+            <!-- <li><a href="./sub4-3.html">AS센터 안내</a></li> -->
 				   </ul>
 			   </li>
 		   </ul>
@@ -134,19 +135,20 @@
 
 	  
 
+
 		<!-- 퀵 메뉴 시작 -->
 		<div class="quickmenu">
 			<ul>
 			  <li>
-				<a href="https://smartstore.naver.com/kleinz?">
+				<a href="https://smartstore.naver.com/kleinz" target="_blank">
 				<img src="./img/icon/icon_quick_01.png" width="" alt=""></a>
 			</li>
 			<li>
-				<a href="https://accounts.kakao.com/login/?continue=https://business.kakao.com/dashboard/?sid%3Dpfr#login">
+				<a href="https://accounts.kakao.com/login/?continue=https://business.kakao.com/dashboard/?sid%3Dpfr#login" target="_blank">
 				<img src="./img/icon/icon_quick_02.png" width="" alt=""></a>
 			</li>
 			<li>
-				<a href="tel:1644-9721">
+				<a href="tel:1644-9721" target="_blank">
 				<img src="./img/icon/icon_quick_03.png" width="" alt=""></a>
 			</li>
 			</ul>
@@ -155,18 +157,18 @@
 
 
 
-  
   	  <!-- 상단 메인명 텍스트바 -->
       <section class="category_text_area_3">
         <div class="container">
           <div class="row">
           <div class="col-md-12_main_회사소개_bar">
-            <div class="company_intro_sub_black">FAQ</div>
-            <div class="company_intro2_sub_black">여러분의 궁금증을 친절하게 전해드리겠습니다.</div>
+            <div class="company_intro_sub_black">커뮤니티</div>
+            <div class="company_intro2_sub_black">여러분께 클라인즈의 각종 소식과 정보를 제공하여<br>활발하게 소통하는 기업이 되겠습니다.</div>
           </div>
           </div>
         </div>
         </section>
+
 
 
 
@@ -200,38 +202,51 @@
         </section><!-- 서브페이지 상단 페이지 경로-->
 
 
+        
+    <!-- 검색창 -->
+    <div class="search-container">
+      <input type="text" id="search-input" placeholder="검색어를 입력하세요.">
+      <button onclick="search()" style="background: #c00000;">
+        <i class="fas fa-search" style="color: #fff;"></i>
+      </button>
+    </div>
+  </div>
+  
 
-      <!-- 카테고리 분류 -->
-      <div class="category">
-        <h3 class="page_title"></h3>
-        <div class="container4">
-            <ul class="tab_btn4 tp-box">
-                <li><a href="./sub3-2.html" class="active">전체(30)</a></li>
-                <li><a href="./sub3-2-1.html">자주 묻는 질문(5)</a></li>
-                <li><a href="./sub3-2-2.html">화면, 음성(9)</a></li>
-                <li><a href="./sub3-2-3.html">PC연결(5)</a></li>
-                <li><a href="./sub3-2-4.html">외부기기연결(5)</a></li>
-                <li><a href="./sub3-2-5.html">채널(4)</a></li>
-                <li><a href="./sub3-2-6.html">기타(2)</a></li>
-            </ul>
-        </div>
+
+              <!-- 카테고리 분류 리뉴얼 -->
+        <div class="category">
+          <h3 class="page_title"></h3>
+          <div class="container4">
+              <ul class="tab_btn4 tp-box">
+                  <li><a href="#" class="active" data-filter="all">전체(30)</a></li>
+                  <li><a href="#" data-filter="must">자주 묻는 질문(5)</a></li>
+                  <li><a href="#" data-filter="display">화면, 음성(9)</a></li>
+                  <li><a href="#" data-filter="pc-connect">PC연결(5)</a></li>
+                  <li><a href="#" data-filter="out-connect">외부기기연결(5)</a></li>
+                  <li><a href="#" data-filter="channel">채널(4)</a></li>
+                  <li><a href="#" data-filter="other">기타(2)</a></li>
+              </ul>
+          </div>
+
+          
 
 
     <!-- =======  자주 묻는 질문 Section ======= -->
     <section id="faq">
 
-      <div class="container" data-aos="fade-up">
+      <div class="container">
 
-        <div class="section-header">
-          <h2>자주 묻는 질문</h2>
-        </div>
+        <!-- <div class="section-header">
+          <h2><span style=" display: block; margin-top: 50px;">자주 묻는 질문</span></h2>
+        </div> -->
 
-        <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
-          <div class="col-lg-9">
+        <div class="row justify-content-center">
+          <div class="col-lg-9" data-bs-parent=".faq-list">
 
             <ul class="faq-list">
 
-              <li>
+              <li data-filter="must">
                 <div data-bs-toggle="collapse" class="collapsed question" href="#faq1">제품 보증 기간은 어떻게 되나요?<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
                 <div id="faq1" class="collapse" data-bs-parent=".faq-list">
                   <p>
@@ -240,7 +255,7 @@
                 </div>
               </li>
 
-              <li>
+              <li  data-filter="must">
                 <div data-bs-toggle="collapse" href="#faq2" class="collapsed question">PC와 TV를 연결하였는데 화면이 전혀 나오지 않습니다.<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
                 <div id="faq2" class="collapse" data-bs-parent=".faq-list">
                   <p>
@@ -251,7 +266,7 @@
                 </div>
               </li>
 
-              <li>
+              <li  data-filter="must">
                 <div data-bs-toggle="collapse" href="#faq3" class="collapsed question">USB(미디어) 모드에서 동영상을 재생하는데 재생이 되는 것과 안 되는 것이 있어요.(코덱정보 포함)<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
                 <div id="faq3" class="collapse" data-bs-parent=".faq-list">
                   <p>
@@ -276,7 +291,7 @@
                 </div>
               </li>
 
-              <li>
+              <li  data-filter="must">
                 <div data-bs-toggle="collapse" href="#faq4" class="collapsed question">셋톱박스와 연결하였는데 화면이 흑백으로 나오거나 녹색으로 나와요.<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
                 <div id="faq4" class="collapse" data-bs-parent=".faq-list">
                   <p>
@@ -288,7 +303,7 @@
                 </div>
               </li>
 
-              <li>
+              <li data-filter="must">
                 <div data-bs-toggle="collapse" href="#faq5" class="collapsed question">TV 리모컨의 숫자 버튼으로 채널을 누르면 원하는 채널로 바뀌지 않고 다른 채널로 바뀝니다.<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
                 <div id="faq5" class="collapse" data-bs-parent=".faq-list">
                   <p>
@@ -306,7 +321,7 @@
                       예를 들어 43번 채널을 누르면 2번으로 채널이 바뀌는 증상입니다.
                     현재 가장 많이 발생하는 문제입니다. LG, 삼성 제품 중 일부 다수 모델에서 이러한 문제가 발생중입니다.
                     펌웨어 업데이트 후 팩토리 모드에서 Cable Qam 기능을 끄기로 설정한 후 채널 검색을 하면 해결 됩니다.
-                                  </p>
+                     </p>
                 </div>
               </li>
 
@@ -327,18 +342,18 @@
 <!-- =======  F.A.Q Section ======= -->
 <section id="faq">
 
-  <div class="container" data-aos="fade-up">
+  <div class="container">
 
-    <div class="section-header">
-      <h2>F.A.Q</h2>
-    </div>
+    <!-- <div class="section-header">
+      <h2><span style="display: block; margin-top: 50px;">F.A.Q</span> </h2>
+    </div> -->
 
-    <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
+    <div class="row justify-content-center">
       <div class="col-lg-9">
 
         <ul class="faq-list">
 
-          <li>
+          <li data-filter="other">
             <div data-bs-toggle="collapse" class="collapsed question" href="#faq6"><span class="category">[기타]</span>[TV]리모컨 동작이 안돼요.<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
             <div id="faq6" class="collapse" data-bs-parent=".faq-list">
               <p>
@@ -355,7 +370,7 @@
             </div>
           </li>
 
-          <li>
+          <li data-filter="other">
             <div data-bs-toggle="collapse" href="#faq7" class="collapsed question"><span class="category">[기타]</span>[TV]TV가 몇시간 지나면 꺼져요<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
             <div id="faq7" class="collapse" data-bs-parent=".faq-list">
               <p>
@@ -364,7 +379,7 @@
             </div>
           </li>
 
-          <li>
+          <li data-filter="channel">
             <div data-bs-toggle="collapse" href="#faq8" class="collapsed question"><span class="category">[채널]</span>선호 채널이 선택되지 않아요.<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
             <div id="faq8" class="collapse" data-bs-parent=".faq-list">
               <p>
@@ -373,7 +388,7 @@
             </div>
           </li>
 
-          <li>
+          <li data-filter="channel">
             <div data-bs-toggle="collapse" href="#faq9" class="collapsed question"><span class="category">[채널]</span>특정 채널만 안 나와요<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
             <div id="faq9" class="collapse" data-bs-parent=".faq-list">
               <p>
@@ -382,7 +397,7 @@
             </div>
           </li>
 
-          <li>
+          <li data-filter="channel">
             <div data-bs-toggle="collapse" href="#faq10" class="collapsed question"><span class="category">[채널]</span>특정채널만 흑백으로 나와요<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
             <div id="faq10" class="collapse" data-bs-parent=".faq-list">
               <p>
@@ -391,7 +406,7 @@
             </div>
           </li>
 
-          <li>
+          <li data-filter="channel">
           <div data-bs-toggle="collapse" href="#faq11" class="collapsed question"><span class="category">[채널]</span>TV 채널설정 방법<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
           <div id="faq11" class="collapse" data-bs-parent=".faq-list">
             <p>
@@ -401,7 +416,7 @@
         </li>
 
 
-          <li>
+          <li data-filter="out-connect">
             <div data-bs-toggle="collapse" href="#faq12" class="collapsed question"><span class="category">[외부기기연결]</span>HDMI 1.4 케이블 사용시 영상이나 음성이 안나올경우.<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
             <div id="faq12" class="collapse" data-bs-parent=".faq-list">
               <p>
@@ -412,7 +427,7 @@
             </div>
           </li>
 
-          <li>
+          <li data-filter="out-connect">
             <div data-bs-toggle="collapse" href="#faq13" class="collapsed question"><span class="category">[외부기기연결]</span>미디어 모드에서 몇몇 동영상이 재생되지 않습니다.<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
             <div id="faq13" class="collapse" data-bs-parent=".faq-list">
               <p>
@@ -423,7 +438,7 @@
             </div>
           </li>
 
-          <li>
+          <li data-filter="out-connect">
           <div data-bs-toggle="collapse" href="#faq14" class="collapsed question"><span class="category">[외부기기연결]</span>외부 기기(콤보, DVD, VTR, 게임기 등)와 연결하였는데 화면이 나오지 않아요<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
           <div id="faq14" class="collapse" data-bs-parent=".faq-list">
             <p>
@@ -432,7 +447,7 @@
           </div>
         </li>
 
-        <li>
+        <li data-filter="out-connect">
         <div data-bs-toggle="collapse" href="#faq15" class="collapsed question"><span class="category">[외부기기연결]</span>셋톱박스 와 TV를 컴퍼넌트 케이블로 연결했는데 화면이 이상합니다.<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
         <div id="faq15" class="collapse" data-bs-parent=".faq-list">
           <p>
@@ -443,7 +458,7 @@
         </div>
       </li>
 
-                <li>
+       <li data-filter="out-connect">
       <div data-bs-toggle="collapse" href="#faq16" class="collapsed question"><span class="category">[외부기기연결]</span>PC연결 화면이 나오지 않아요<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
       <div id="faq16" class="collapse" data-bs-parent=".faq-list">
         <p>
@@ -453,7 +468,7 @@
       </div>
     </li>
 
-    <li>
+    <li data-filter="pc-connect">
     <div data-bs-toggle="collapse" href="#faq17" class="collapsed question"><span class="category">[PC연결]</span>PC연결 화면의 좌우가 잘려서 나와요<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
     <div id="faq17" class="collapse" data-bs-parent=".faq-list">
       <p>
@@ -465,7 +480,7 @@
     </div>
   </li>
 
-  <li>
+  <li data-filter="pc-connect">
   <div data-bs-toggle="collapse" href="#faq18" class="collapsed question"><span class="category">[PC연결]</span>PC연결 화면크기가 맞지 않아요<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
   <div id="faq18" class="collapse" data-bs-parent=".faq-list">
     <p>
@@ -474,7 +489,7 @@
   </div>
 </li>
 
-<li>
+<li data-filter="pc-connect">
 <div data-bs-toggle="collapse" href="#faq19" class="collapsed question"><span class="category">[PC연결]</span>PC를 HDMI 케이블로 연결했는데 윈도우 화면이 맞지 않아요. (오버스캔)<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
 <div id="faq19" class="collapse" data-bs-parent=".faq-list">
   <p>
@@ -483,7 +498,7 @@
 </div>
 </li>
 
-<li>
+<li data-filter="pc-connect">
 <div data-bs-toggle="collapse" href="#faq20" class="collapsed question"><span class="category">[PC연결]</span>컴퓨터의 HDMI 단자와 TV의 HDMI 단자를 연결하였는데 소리가 안나와요<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
 <div id="faq20" class="collapse" data-bs-parent=".faq-list">
   <p>
@@ -495,7 +510,7 @@
 </li>
 
 
-<li>
+<li data-filter="pc-connect">
   <div data-bs-toggle="collapse" href="#faq28" class="collapsed question"><span class="category">[PC연결]</span>노트북과 연결방법은?<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
   <div id="faq28" class="collapse" data-bs-parent=".faq-list">
     <p>
@@ -506,7 +521,7 @@
   </li>
 
 
-<li>
+<li data-filter="display">
 <div data-bs-toggle="collapse" href="#faq21" class="collapsed question"><span class="category">[화면,음성]</span>음성이 끊겨요<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
 <div id="faq21" class="collapse" data-bs-parent=".faq-list">
   <p>
@@ -515,7 +530,7 @@
 </div>
 </li>
 
-<li>
+<li data-filter="display">
 <div data-bs-toggle="collapse" href="#faq22" class="collapsed question"><span class="category">[화면,음성]</span>신호없음 이 화면에 나와요<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
 <div id="faq22" class="collapse" data-bs-parent=".faq-list">
   <p>
@@ -525,7 +540,7 @@
 </div>
 </li>
 
-<li>
+<li data-filter="display">
 <div data-bs-toggle="collapse" href="#faq23" class="collapsed question"><span class="category">[화면,음성]</span>화면 색상이 이상해요<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
 <div id="faq23" class="collapse" data-bs-parent=".faq-list">
   <p>
@@ -535,7 +550,7 @@
 </li>
 
 
-<li>
+<li data-filter="display">
 <div data-bs-toggle="collapse" href="#faq24" class="collapsed question"><span class="category">[화면,음성]</span>화면에 희고 검은 점이 생겨요<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
 <div id="faq24" class="collapse" data-bs-parent=".faq-list">
   <p>
@@ -544,7 +559,7 @@
 </div>
 </li>
 
-<li>
+<li data-filter="display">
 <div data-bs-toggle="collapse" href="#faq25" class="collapsed question"><span class="category">[화면,음성]</span>화면에 줄이 생기고 흔들려요(아날로그 방송을 볼 때)<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
 <div id="faq25" class="collapse" data-bs-parent=".faq-list">
   <p>
@@ -553,7 +568,7 @@
 </div>
 </li>
 
-<li>
+<li data-filter="display">
 <div data-bs-toggle="collapse" href="#faq26" class="collapsed question"><span class="category">[화면,음성]</span>화면이 모자이크처럼 화면이 깜박거려요(디지털 방송을 볼 때)<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
 <div id="faq26" class="collapse" data-bs-parent=".faq-list">
   <p>
@@ -562,7 +577,7 @@
 </div>
 </li>
 
-<li>
+<li data-filter="display">
 <div data-bs-toggle="collapse" href="#faq27" class="collapsed question"><span class="category">[화면,음성]</span>화면은 나오는데 소리가 안 나와요<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
 <div id="faq27" class="collapse" data-bs-parent=".faq-list">
   <p>
@@ -574,7 +589,7 @@
 
 
 
-<li>
+<li data-filter="display">
 <div data-bs-toggle="collapse" href="#faq29" class="collapsed question"><span class="category">[화면,음성]</span>화면이 전혀 나오지 않아요.<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
 <div id="faq29" class="collapse" data-bs-parent=".faq-list">
   <p>
@@ -586,7 +601,7 @@
 </div>
 </li>
 
-<li>
+<li data-filter="display">
 <div data-bs-toggle="collapse" href="#faq30" class="collapsed question"><span class="category">[화면,음성]</span>처음 설치 시 화면에 노이즈 현상<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
 <div id="faq30" class="collapse" data-bs-parent=".faq-list">
   <p>
@@ -605,6 +620,8 @@
 
 </section><!-- End  F.A.Q Section -->
 
+<!-- 검색내용 없을시 -->
+<p id="no-match-message" style="display: none;">해당되는 내용이 없습니다.</p></div>
 
 
   </main><!-- End #main -->
@@ -659,6 +676,9 @@
 <script src="assets4/vendor/isotope-layout/isotope.pkgd.min.js"></script>
 <script src="assets4/vendor/swiper/swiper-bundle.min.js"></script>
 <script src="assets4/vendor/php-email-form/validate.js"></script>
+<script src="assets/js/faq_category_data_filter.js"></script>
+<script src="assets/js/faq_guide_search.js"></script>
+
 
 <!-- Template Main JS File -->
 <script src="assets4/js/main.js"></script>

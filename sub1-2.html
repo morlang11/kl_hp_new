@@ -49,7 +49,65 @@
 	<meta name="theme-color" content="#ffffff">
 	<!-- 파비콘 끝 -->
       </head>
+
+
+	  <script>
+		$(document).ready(function() {
+		  var activeCategory = $('.tab_btn a.active').data('filter');
+		  $('.main3 > div[data-filter="' + activeCategory + '"]').fadeIn(500); // 초기에 선택된 카테고리 페이드인 애니메이션으로 보이기
 	  
+		  $('.tab_btn a').on('click', function() {
+			var category = $(this).data('filter');
+			$('.main3 > div[data-filter]').hide(); // 모든 카테고리 숨기기
+			if (category === 'all') {
+			  $('.main3 > div[data-filter]').fadeIn(500); // 모든 데이터 페이드인 애니메이션으로 보이기
+			} else {
+			  $('.main3 > div[data-filter="' + category + '"]').fadeIn(500); // 선택한 카테고리 페이드인 애니메이션으로 보이기
+			}
+			$('.tab_btn a').removeClass('active');
+			$(this).addClass('active');
+			$('.container3').show();
+			$('.main3').show();
+			$('.ceo_sign_img_wrapper').hide(); // 모든 이미지 숨기기
+			$('.main3 > div[data-filter="' + category + '"] .ceo_sign_img_wrapper').fadeIn(100).addClass('zoom-in'); // 선택한 카테고리의 이미지 페이드인 및 확대 애니메이션 효과 추가
+	  
+			return false;
+		  });
+	  
+		  $('.tab_btn a').click(function() {
+			$('.tab_btn4').show();
+		  });
+	  
+		  $('.container3').show();
+		  $('.main3').show();
+		});
+	  
+		// CI, BI 카테고리의 데이터 표시 및 애니메이션
+		$('.CI[data-filter="CI"], .BI[data-filter="BI"]').fadeIn(500, function() {
+		  $('.CI[data-filter="CI"] .ceo_sign_img_wrapper, .BI[data-filter="BI"] .ceo_sign_img_wrapper').addClass('zoom-in');
+		});
+	  </script>
+	  
+	  <style>
+		.zoom-in {
+		  animation-name: zoomIn;
+		  animation-duration: 1s;
+		  animation-fill-mode: both;
+		}
+		
+		@keyframes zoomIn {
+		  from {
+			transform: scale(0);
+			opacity: 0;
+		  }
+		  to {
+			transform: scale(1);
+			opacity: 1;
+		  }
+		}
+	  </style>
+
+
 <body>
 	
 <!-- 상단 메뉴바 -->
@@ -74,7 +132,7 @@
 			</a>
 		</h1>
 
-		<li>
+		<li class="active">
 			<a href="./sub1-1.html">회사소개</a>
 			<ul class="gnb_sub">
 				<li><a href="./sub1-1.html">회사개요</a></li>
@@ -89,7 +147,7 @@
 				   <a href="./sub2-1.html">제품</a>
 				   <ul class="gnb_sub">
 					   <li><a href="./sub2-1.html">제품목록</a></li>
-					   <li><a href="./sub2-2.html">제품설치방법</a></li>
+					   <li><a href="./sub2-2.html">제품가이드</a></li>
 				   </ul>
 			   </li>
 
@@ -103,11 +161,11 @@
 			   </li>
 
 			   <li>
-				<a href="./sub4-1.html">고객지원</a>
-				<ul class="gnb_sub">
-					<li><a href="./sub4-1.html">AS전 확인사항</a></li>
-					<li><a href="./sub4-2.html">고객 지원 정책</a></li>
-					<li><a href="./sub4-3.html">AS센터 안내</a></li>
+          <a href="./sub4-1.html">고객지원</a>
+          <ul class="gnb_sub">
+            <li><a href="./sub4-1.html">AS 안내</a></li>
+            <li><a href="./sub4-2.html">고객 지원 정책</a></li>
+            <!-- <li><a href="./sub4-3.html">AS센터 안내</a></li> -->
 				   </ul>
 			   </li>
 		   </ul>
@@ -118,14 +176,15 @@
 
 
 
+
   
-	  <!-- 상단 메인명 텍스트바 -->
+<!-- 상단 메인명 텍스트바 -->
 <section class="category_text_area_1">
 	<div class="container">
 	  <div class="row">
 		<div class="col-md-12_main_회사소개_bar">
-		  <div class="company_intro_sub_black">회사 CI/BI</div>
-		  <div class="company_intro2_sub_black">주식회사 클라인즈의<br>Corportate&Brand Identity</div>
+		  <div class="company_intro_sub_black">회사소개</div>
+		  <div class="company_intro2_sub_black">신뢰, 도전, 나눔, 인재라는 경영이념으로<br>세계 최고의 전자기업이 되도록 노력하겠습니다.</div>
 		</div>
 	  </div>
 	</div>
@@ -163,95 +222,160 @@
 
 
 
-  <div class="회사소개_main_text">Corportate Identity</div>
+  <!-- <div class="회사소개_main_text">Corportate Identity</div> -->
   
   <div class="회사소개_sub_text">
-	워드마크의 디자인은 유연성과 단순함을 강조하고 있으며, 우주와 세계 무대를 상징하는 타원을 비스듬하게 처리하여, 동적이고 혁신적인 이미지를 나타내고자 했습니다.
-	또 S자와 G자의 터진 부분을 통해 내부와 외부의 기운이 통하게 함으로써 세계와 호흡하고 인류사회에 이바지하려는 의지를 담았습니다.
-	영문 로고 디자인은 기술주의를 통한 고객지향 의지, 첨단 기업의 이미지를 현대적인 감각으로 표현한 것입니다.
+	독일 장인들의 고집을 닮고자 하는 KLEINZ 일반과 장인들의 차이점은 만들고자 하는 사고부터 시작됩니다.
+	KLEINZ는 독일의 장인 정신에 따라 제품 기획부터 제조 과정까지 모든 공정에 혼을 녹여 우리 생활에 보다 편리하며, 합리적이고 혁신적인 제품들을 추구합니다.
   </div>
 
 
   
+
 		<!-- 퀵 메뉴 시작 -->
 		<div class="quickmenu">
 			<ul>
 			  <li>
-				<a href="https://smartstore.naver.com/kleinz?">
+				<a href="https://smartstore.naver.com/kleinz" target="_blank">
 				<img src="./img/icon/icon_quick_01.png" width="" alt=""></a>
 			</li>
 			<li>
-				<a href="https://accounts.kakao.com/login/?continue=https://business.kakao.com/dashboard/?sid%3Dpfr#login">
+				<a href="https://accounts.kakao.com/login/?continue=https://business.kakao.com/dashboard/?sid%3Dpfr#login" target="_blank">
 				<img src="./img/icon/icon_quick_02.png" width="" alt=""></a>
 			</li>
 			<li>
-				<a href="tel:1644-9721">
+				<a href="tel:1644-9721" target="_blank">
 				<img src="./img/icon/icon_quick_03.png" width="" alt=""></a>
 			</li>
 			</ul>
 		  </div>
 		 <!-- 퀵메뉴 끝  -->
+		 
 
-
-      <!-- 카테고리 분류 -->
-	  <div class="main3">
+      <!-- 카테고리 분류 백업-->
+	  <!-- <div class="main3">
         <h3 class="page_title"></h3>
         <div class="container3">
             <ul class="tab_btn tp-box">
                 <li><a href="./sub1-2.html" class="active">CI</a></li>
                 <li><a href="./sub1-3.html">BI</a></li>
             </ul>
-        </div>
+        </div> -->
 
 
 
+		      <!-- 카테고리 분류 신규-->
+			  <div class="main3">
+				<h3 class="page_title"></h3>
+				<div class="container3">
+				  <ul class="tab_btn tp-box">
+					<!-- <li><a href="#" class="active" data-filter="all">CI/BI</a></li> -->
+					<li><a href="#" data-filter="CI" class="active">CI</a></li>
+					<li><a href="#" data-filter="BI">BI</a></li>
+				  </ul>
+				</div>
+				
 
-<!-- ======= Alt Services Section ======= -->
-<section id="alt-services" class="alt-services">
-	<div class="container" data-aos="fade-up">
+
+
+<!-- ======= CI Section ======= -->
+<div class="CI" data-filter="CI">
+    <section id="alt-services" class="alt-services">
+	<div class="container">
 	  <div class="row justify-content-around gy-4">
-		<div class=".cibi_img_wrappe">
+		<div class="cibi_img_wrappe">
 			<div class="cibi_img">
-				<img src="img/ci_기본형.png" class="img-fluid" alt="" data-aos="fade-up" data-aos-delay="100"></div></div>
+				<img src="img/ci_기본형.png" class="img-fluid" alt=""></div></div>
 		</div>
 
-		<div class="cibi_sub_text" data-aos="fade-up" data-aos-delay="200">
+		<div class="cibi_sub_text">
 		  <div class="ceo_main">
 			<span class="cibi_intro_warm">기본형 CI
 			</span>
 			<p>기본형 워드마크는 Oval과 문자가 결합된 형태이며, 문자 부분이 배경을 투과하는 조형적 특징을 가지고 있다.
 				따라서, 적용 시 최적의 적용 조건을 유지할 수 있도록 적용 공간에 대한 계획이 선행되어야 한다.</p>
 		  </div>
-		  <a href="./down/클라인즈_CI_기본형.ai" div class="text" download="">
-		  <h1 class="btn" data-aos="fade-up" data-aos-delay="300">기본형 CI 다운로드</h1></a>
+		  <a href="./img/download/logo/KLEINZ_CI_기본형.ai" div class="text" download="">
+		  <h1 class="btn">기본형 CI 다운로드</h1></a>
 		</div>
 		
 		<hr>
 
 
 		<section id="alt-services" class="alt-services">
-			<div class="container" data-aos="fade-up">
+			<div class="container">
 			  <div class="row justify-content-around gy-4">
-				<div class=".cibi_img_wrappe">
+				<div class="cibi_img_wrappe">
 					<div class="cibi_img">
-						<img src="img/ci_조합형.png" class="img-fluid" alt="" data-aos="fade-up" data-aos-delay="400"></div></div>
+						<img src="img/ci_조합형.png" class="img-fluid" alt=""></div></div>
 				</div>
 		
-				<div class="cibi_sub_text" data-aos="fade-up" data-aos-delay="500">
+				<div class="cibi_sub_text">
 				  <div class="ceo_main">
 					<span class="cibi_intro_warm">조합형 CI
 					</span>
 					<p>기본형 워드마크는 Oval과 문자가 결합된 형태이며, 문자 부분이 배경을 투과하는 조형적 특징을 가지고 있다.
 						따라서, 적용 시 최적의 적용 조건을 유지할 수 있도록 적용 공간에 대한 계획이 선행되어야 한다.</p>
 				  </div>
-				  <a href="./down/클라인즈_CI_조합형.ai" div class="text" download="">
-				  <h1 class="btn" data-aos="fade-up" data-aos-delay="600">조합형 CI 다운로드</h1></a>
+				  <a href="./img/download/logo/KLEINZ_CI_조합형.ai" div class="text" download="">
+				  <h1 class="btn">조합형 CI 다운로드</h1></a>
 				</div>
 			
-				<hr></div></section>
-		<!-- End Icon Box -->
+				<hr></div>
+			</section>
+			</div></section></div>
+		<!-- End CI -->
   
 
+
+<!-- ======= BI Section ======= -->
+<div class="BI" data-filter="BI">
+    <section id="alt-services" class="alt-services">
+	<div class="container">
+	  <div class="row justify-content-around gy-4">
+		<div class="cibi_img_wrappe">
+			<div class="cibi_img">
+				<img src="img/bi_기본형.png" class="img-fluid" alt=""></div></div>
+		</div>
+
+		<div class="cibi_sub_text">
+		  <div class="ceo_main">
+			<span class="cibi_intro_warm">기본형 BI
+			</span>
+			<p>기본형 워드마크는 Oval과 문자가 결합된 형태이며, 문자 부분이 배경을 투과하는 조형적 특징을 가지고 있다.
+				따라서, 적용 시 최적의 적용 조건을 유지할 수 있도록 적용 공간에 대한 계획이 선행되어야 한다.</p>
+		  </div>
+		  <a href="./img/download/logo/KLEINZ_BI_기본형.ai" div class="text" download="">
+		  <h1 class="btn" >기본형 BI 다운로드</h1></a>
+		</div>
+		
+		<hr>
+
+
+		<section id="alt-services" class="alt-services">
+			<div class="container">
+			  <div class="row justify-content-around gy-4">
+				<div class=".cibi_img_wrappe">
+					<div class="cibi_img">
+						<img src="img/bi_조합형.png" class="img-fluid" alt="" ></div></div>
+				</div>
+		
+				<div class="cibi_sub_text">
+				  <div class="ceo_main">
+					<span class="cibi_intro_warm">조합형 BI
+					</span>
+					<p>기본형 워드마크는 Oval과 문자가 결합된 형태이며, 문자 부분이 배경을 투과하는 조형적 특징을 가지고 있다.
+						따라서, 적용 시 최적의 적용 조건을 유지할 수 있도록 적용 공간에 대한 계획이 선행되어야 한다.</p>
+				  </div>
+				  <a href="./img/download/logo/KLEINZ_BI_조합형.ai" div class="text" download="">
+				  <h1 class="btn">조합형 BI 다운로드</h1></a>
+				</div>
+			
+				<hr></div>
+			</section>
+			</div></section></div>
+		<!-- End BI -->
+  
 
 
 

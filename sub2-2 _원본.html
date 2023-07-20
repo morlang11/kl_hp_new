@@ -9,9 +9,7 @@
 
 	<!-- 이거 때문에 스타일 꼬이니까 최상단	 -->
 	<link href="assets4/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  
-  <!-- 아이콘 -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 
 
     <!-- Bootstrap 3-->
@@ -69,9 +67,7 @@
       </head>
 	  
 
-
-
-
+      
 <body>
 	
 <!-- 상단 메뉴바 -->
@@ -210,20 +206,6 @@
 	  </section><!-- 서브페이지 상단 페이지 경로-->
 
 
-
-    <!-- 검색창 -->
-    <div class="search-container">
-      <input type="text" id="search-input" placeholder="검색어를 입력하세요.">
-      <button onclick="search()" style="background: #c00000;">
-        <i class="fas fa-search" style="color: #fff;"></i>
-      </button>
-    </div>
-  </div>
-  
-
-
-
-
 <!-- 카테고리 분류 -->
 <div class="category">
   <h3 class="page_title"></h3>
@@ -240,11 +222,11 @@
 
 <!-- 자주 묻는 질문 Section -->
 <section id="faq">
-  <div class="container">
+  <div class="container" data-aos="fade-up">
    <!--  <div class="section-header">
       <h2>제품설치</h2>
     </div> -->
-    <div class="row justify-content-center">
+    <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
       <div class="col-lg-9">
         <ul class="faq-list">
           <li data-filter="installation">
@@ -357,11 +339,11 @@
 
 <!-- =======  F.A.Q Section ======= -->
 <section id="faq">
-  <div class="container">
+  <div class="container" data-aos="fade-up">
     <!-- <div class="section-header">
       <h2>제품기능</h2>
     </div> -->
-    <div class="row justify-content-center">
+    <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
       <div class="col-lg-9">
         <ul class="faq-list">
           <li data-filter="usage">
@@ -439,8 +421,6 @@
 
 <!-- End  F.A.Q Section -->
 
-<!-- 검색내용 없을시 -->
-<p id="no-match-message" style="display: none;">해당되는 내용이 없습니다.</p></div>
 
 
   </main><!-- End #main -->
@@ -494,8 +474,6 @@
 <script src="assets4/vendor/swiper/swiper-bundle.min.js"></script>
 <script src="assets4/vendor/php-email-form/validate.js"></script>
 <script src="assets/js/prodect_guide_category_data_filter.js"></script>
-<script src="assets/js/faq_guide_search.js"></script>
-
 
 <!-- Template Main JS File -->
 <script src="assets4/js/main.js"></script>
@@ -514,16 +492,6 @@
 	<script>
 	  AOS.init();
 	</script>
-
-
-
-
-
-
-
-
-
-
 
 
 </html>
