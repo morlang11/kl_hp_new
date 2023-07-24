@@ -780,9 +780,16 @@ box-shadow:         inset 0px -4px 5px -4px rgba(50, 50, 50, 0.55);
 
 
 /* 여백 추가할때 */
+/* 작은여백 */
 .brank{
 	margin: 5%;
 }
+/* 높은여백 */
+.brank2{
+	margin: 15%;
+}
+
+
 
 .main-menu li:hover>a,nav.main-menu li.active>a,.dropdown-menu>li>a:hover,.dropdown-menu>li>a:focus,.dropdown-menu>.active>a,.dropdown-menu>.active>a:hover,.dropdown-menu>.active>a:focus,.no-touch .dashboard-page nav.dashboard-menu ul li:hover a,.dashboard-page nav.dashboard-menu ul li.active a {
 color:#fff;
