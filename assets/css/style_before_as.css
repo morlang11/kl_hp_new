@@ -779,7 +779,14 @@ Home Section style
     line-height: 2rem;
 }
 
-
+/* 구분선 */
+hr.as_guide{
+    display: inline-block;
+    width: 90%;
+    margin-bottom: -40px;
+    padding: -40px;
+    border-color: rgb(230, 230, 230);
+}
 
 /*
 About section style
@@ -801,7 +808,6 @@ About section style
     left:5%;
     top:5%;
     border:10px solid #c9c9c9;
-
 }
 
 
@@ -818,11 +824,15 @@ About section style
 
 
 span.as_text{
+    display: inline-block;
     line-height: 30px;
+    margin-top: -20px;
 }
 
 span.as_text2{
+    display: block;
     font-size: 30px;
+    color:  #dd0012;
 }
 
 
@@ -833,8 +843,10 @@ span.as_text2{
 .work_item{
     position: relative;
     top:20px;
+    margin: 20px;
 }
 .work_item_img img{
+    display: inline;
     width:100%;
 }
 .work_item_details{
