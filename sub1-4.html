@@ -51,58 +51,7 @@
       </head>
 
 
-	  <script>
-		$(document).ready(function() {
-		  var activeCategory = $('.tab_btn a.active').data('filter');
-		  $('.main3 > div[data-filter="' + activeCategory + '"]').fadeIn(500); // 초기에 선택된 카테고리 페이드인 애니메이션으로 보이기
-	  
-		  $('.tab_btn a').on('click', function() {
-			var category = $(this).data('filter');
-			$('.main3 > div[data-filter]').hide(); // 모든 카테고리 숨기기
-			if (category === 'all') {
-			  $('.main3 > div[data-filter]').fadeIn(500); // 모든 데이터 페이드인 애니메이션으로 보이기
-			  $('.shop, .office').fadeIn(500); // shop과 office 클래스 페이드인 애니메이션으로 보이기
-			} else {
-			  $('.main3 > div[data-filter="' + category + '"]').fadeIn(500); // 선택한 카테고리 페이드인 애니메이션으로 보이기
 
-			}
-			$('.tab_btn a').removeClass('active');
-			$(this).addClass('active');
-			$('.container3').show();
-			$('.main3').show();
-			$('.ceo_sign_img_wrapper').hide(); // 모든 이미지 숨기기
-			$('.main3 > div[data-filter="' + category + '"] .ceo_sign_img_wrapper').fadeIn(100).addClass('zoom-in'); // 선택한 카테고리의 이미지 페이드인 및 확대 애니메이션 효과 추가
-	  
-			return false;
-		  });
-	  
-		  $('.tab_btn a').click(function() {
-			$('.tab_btn4').show();
-		  });
-	  
-		  $('.container3').show();
-		  $('.main3').show();
-		});
-	  </script>
-
-	<style>
-.zoom-in {
-  animation-name: zoomIn;
-  animation-duration: 1s;
-  animation-fill-mode: both;
-}
-
-@keyframes zoomIn {
-  from {
-    transform: scale(0);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-	</style>
 <body>
 	
 <!-- 상단 메뉴바 -->
@@ -179,7 +128,7 @@
 				<img src="./img/icon/icon_quick_01.png" width="" alt=""></a>
 			</li>
 			<li>
-				<a href="https://accounts.kakao.com/login/?continue=https://business.kakao.com/dashboard/?sid%3Dpfr#login" target="_blank">
+				<a href="https://pf.kakao.com/_TYcMxb" target="_blank">
 				<img src="./img/icon/icon_quick_02.png" width="" alt=""></a>
 			</li>
 			<li>
@@ -242,8 +191,7 @@
         <h3 class="page_title"></h3>
         <div class="container4">
             <ul class="tab_btn tp-box">
-				<li><a href="#" class="active" data-filter="all">전체</a></li>
-                <li><a href="#" data-filter="company">클라인즈 본사</a></li>
+                <li><a href="#" class="active"  data-filter="company">클라인즈 본사</a></li>
                 <li><a href="#" data-filter="shop">클라인즈 오프라인 매장</a></li>
 				<li><a href="#" data-filter="office">클라인즈 서울사무소</a></li>
             </ul>
@@ -260,14 +208,12 @@
 	<div class="street_img_company"></div>
 		<img src="img/street_img_company.jpg" class="img-fluid" alt=""  data-aos="zoom-in" data-aos-delay="200"></div>
 
-  
 		<div class="회사소개_sub_text">
 			모든게 빠르게 변화하는 시대에 인간과 함께하는 가전기구들도 하루가 다르게 진화하고 있습니다.
 			하지만 모든 가전기구 그 본연의 본질 기능은 크게 바뀌지 않는다고 생각합니다.
 			그래서 기본에 충실하며 인간에게 따뜻한 배려를 더하고자 클라인즈를 통해 실현하고자 합니다.
 			인간생활에 따뜻한 배려를 제공하는 기업으로 늘 함께 하도록 노력하겠습니다.
 		  </div>
-
 
 
     <!-- ======= Contact Section ======= -->
@@ -380,13 +326,6 @@
 
 
 
-
-		  
-
-
-
-
-
   <!-- ======= Footer ======= -->
   <footer id="footer">
     <div class="container">
@@ -397,7 +336,7 @@
       <div class="footer-right">
         <p>상호: 주식회사 클라인즈&nbsp;&nbsp;&nbsp;&nbsp;대표자: 김태훈&nbsp;&nbsp;&nbsp;&nbsp;사업자 등록번호: 509-88-00048<br> 
 		본사: (17704)경기도 평택시 서탄면 수월암길 15-76&nbsp;&nbsp;&nbsp;&nbsp;통신판매업신고: 금천 제 0429호<br>
-         TEL. 02-857-9720&nbsp;&nbsp;&nbsp;&nbsp;FAX.02-857-9721&nbsp;&nbsp;&nbsp;&nbsp;A/S 고객센터: 1644-9721<br>
+         TEL. 02-857-9720&nbsp;&nbsp;&nbsp;&nbsp;FAX.02-857-9721&nbsp;&nbsp;&nbsp;&nbsp;E-Mail: kleinz@kleinz.co.kr<br>
 		 Copyright(c) 주식회사 클라인즈. All Rights Reserved.</p>
       </div>
       <div class="clearfix"></div>
@@ -407,6 +346,7 @@
       </div>
     </div>
 </footer>
+
 
 
 
@@ -441,6 +381,7 @@
 	<script>
 	  AOS.init();
 	</script>
-
+	<!-- 카테고리 탭 -->
+	<script src="js/location_menu.js"></script>
 
 </html>

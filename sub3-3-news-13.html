@@ -10,32 +10,33 @@
 	<!-- 이거 때문에 스타일 꼬이니까 최상단	 -->
 	<link href="assets4/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- 공지사항 Vendor CSS Files -->
-  <link href="assets_notice/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets_notice/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets_notice/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets_notice/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-  <!-- 공지사항 Template Main CSS File -->
-  <link href="assets_notice/css/main.css" rel="stylesheet">
+  <!-- 뉴스 상세 Main CSS Files -->
+  <link href="assets_news/css/variables.css" rel="stylesheet">
+  <link href="assets_news/css/main.css" rel="stylesheet">
+  
+  <!-- 뉴스 상세 CSS Files -->
+  <link href="assets_news/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets_news/vendor/aos/aos.css" rel="stylesheet">
 
+  <!-- Bootstrap 3-->
+  <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
 
-    <!-- Bootstrap 3-->
-    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <!-- Google Fonts -->
-    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic|Roboto+Condensed:300italic,400italic,700italic,400,300,700' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,300,700' rel='stylesheet' type='text/css'>
-    <!-- Template Styles -->
-    <link href="css/style.css" rel="stylesheet" media="screen">
+  <!-- Google Fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic|Roboto+Condensed:300italic,400italic,700italic,400,300,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,300,700' rel='stylesheet' type='text/css'>
+
+  <!-- Template Styles -->
+  <link href="css/style.css" rel="stylesheet" media="screen">
+
 	<!--애니메이션-->
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 	<!-- 사이드 메뉴 -->
 	<link rel="stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 	
-    <!-- 스크롤애니메이션    -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-	
+  <!-- 스크롤애니메이션    -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 
   <!-- Vendor CSS Files -->
@@ -48,6 +49,7 @@
 
 
   <!-- Template Main CSS File -->
+  <link href="assets/css/style_faq.css" rel="stylesheet">
   <link href="assets4/css/style.css" rel="stylesheet">
 
 
@@ -160,8 +162,6 @@
 		  </div>
 		 <!-- 퀵메뉴 끝  -->
 
-
-
   
   	  <!-- 상단 메인명 텍스트바 -->
       <section class="category_text_area_3">
@@ -183,7 +183,7 @@
           <div class="row">
           <div class="col-md-12 col-lg-8">
             <div class="title-single-box">
-            <h1 class="title-single">공지사항</h1>
+            <h1 class="title-single">NEWS</h1>
             <!--<span class="color-text-a">클라인즈 회사개요</span>-->
             </div>
           </div>
@@ -197,7 +197,7 @@
               <a href="./sub3-1.html">커뮤니티</a>
               </li>
               <li class="breadcrumb-item active" aria-current="page">
-              공지사항
+              NEWS
               </li>
             </ol>
             </nav>
@@ -207,137 +207,130 @@
         </section><!-- 서브페이지 상단 페이지 경로-->
 
 
-        
+
+<!-- 뉴스 섹션 -->
+
+    <!-- ======= Hero Slider Section ======= -->
+    <!--<section id="hero-slider" class="hero-slider">
+      <div class="container-md" data-aos="fade-in">
+        <div class="row">
+          <div class="col-12">
+            <div class="swiper sliderFeaturedPosts">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a href="single-post.html" class="img-bg d-flex align-items-end" style="background-image: url('assets_news/img/post-slide-1.jpg');">
+                    <div class="img-bg-inner">
+                      <h2><span class="kl_news">클라인즈 소식</span></h2>
+                      <p>클라인즈의 소식과 관련 뉴스를 전달 해드리겠습니다.</p>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="swiper-slide">
+                  <a href="single-post.html" class="img-bg d-flex align-items-end" style="background-image: url('assets_news/img/post-slide-2.jpg');">
+                    <div class="img-bg-inner">
+                      <h2><span class="kl_news">클라인즈 이벤트</span></h2>
+                      <p>클라인즈에서 진행중인 이벤트 내용을 전달 해드리겠습니다.</p>
+                    </div>
+                  </a>
+                </div>
+
+              <div class="custom-swiper-button-next">
+                <span class="bi-chevron-right"></span>
+              </div>
+              <div class="custom-swiper-button-prev">
+                <span class="bi-chevron-left"></span>
+              </div>
+
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- End Hero Slider Section -->
+
+    <main id="main">
+
+      <section class="single-post-content">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-9 post-content" data-aos="fade-up">
+  
+              <!-- ======= Single Post Content ======= -->
+              <div class="single-post">
+                <div class="post-meta"><span class="date"></span> <span class="mx-1"></span> <span>JAN 22th '16</span></div>
+                <h1 class="mb-5"><span class="news_main_title">UHD TV 수요 꾸준한 증가…풀HD는 감소세</span></h1>
+                  <p><span class="news_detail_text">
+                    초고해상도(UHD) TV 점유율이 올해를 기점으로 풀HD TV 점유율을 넘어설 것이라는 전망이 나왔다. TV해상도는 HD, 풀HD, 4K로 불리는 UHD를 거쳐 올해 열린 CES 2016에서는 8K 해상도까지 발전했다.</span>
+                  <br><br>
+
+                  <figure class="my-4">
+                    <img src="assets_news/img/post-landscape-13.jpg"  width="850px" style="display: inline-flex; align-items: center;" alt="" class="img-fluid">
+                    <figcaption>사진1</figcaption>
+                  </figure>
+
+                  <p><span class="news_detail_text">
+                    21일 시장조사기관에 따르면 올해 UHD TV 시장의 점유율은 49%에 달할 것으로 전망된다. 풀HD는 36.6%로
+                    UHD보다도 10% 이상 줄어들 전망이다.UHD TV 수요는 전년 대비 70% 이상 급증해 3100만대에서
+                    5400만대로 늘어날 것으로 관측된다.
+                  <br><br>
+                  지난 2013년만 해도 UHD TV의 점유율은 3%에 불과했다. 그러나 2014년 17.1%, 2015년 36.6%로 집계되면서
+                  가파른 성장세를 보였다. 내년에는 UHD TV가 전체 TV 점유율의 절반을 훌쩍 넘는 58.9%를 기록할 것으로 예상되며,
+                  UHD TV와 풀HD TV의 점유율 격차도 더욱 커질 것으로 보인다.
+                  TV 평균 사이즈도 43.5인치 정도인 풀HD보다 UHD가 10인치 가량 더 큰 52.1인치를 기록할 전망이다.
+                  <br><br>
+                  UHD TV 중에서는 유기발광다이오드(OLED) TV의 수요도 증가하는 추세다. 지난해 37만대에 불과했던 OLED TV 수요는 올해
+                  100만대를 훌쩍 넘을 것으로 관측된다. 그간 LG전자가 OLED TV 시장을 이끌어 왔으나, 올해부터는 일본 파나소닉, 중국의 스카이워스
+                  , 창홍, 콩카, 터키의 백스텔 등 글로벌 TV 업체들이 OLED TV 시장에 뛰어들어 경쟁이 심화될 전망이다.
+                </span>
+              </p></p>
+              </div>
+
+          <p>
+            <span class="news_source"><a href="http://www.m-i.kr/news/articleView.html?idxno=207395" target="_blank">출처: 매일일보</a></span>
+          </p>
+
+            </div>
+            <div class="col-md-3">
+              <!-- ======= Sidebar ======= -->
+                <div class="aside-block">
+                  <h3 class="aside-title">Categories</h3>
+                  <ul class="aside-links list-unstyled">
+                    <li><a href="sub3-3-news-category.html"><i class="bi bi-chevron-right"></i> NEWS</a></li>
+                    <li><a href="sub3-3-event-category.html"><i class="bi bi-chevron-right"></i> EVENT</a></li>
+                  </ul>
+                </div><!-- End Categories -->
+    
+                <div class="aside-block">
+                  <h3 class="aside-title">Tags</h3>
+                  <ul class="aside-tags list-unstyled">
+                    <li><a href="sub3-3-news-category.html">가전제품</a></li>
+                    <li><a href="sub3-3-news-category.html">IT</a></li>
+                    <li><a href="sub3-3-news-category.html">신기술</a></li>
+                    <li><a href="sub3-3-news-category.html">CES</a></li>
+                    <li><a href="sub3-3-news-category.html">IBM</a></li>
+                    <li><a href="sub3-3-news-category.html">인공지능</a></li>
+                  </ul>
+                </div>
+
+                
 
   
 
- <!-- ======= Recent Blog Posts Section ======= -->
- <section id="recent-blog-posts" class="recent-blog-posts">
-  <div class="container" data-aos="fade-up">
-
-
-<!-- 
-<div class=" section-header">
-    <h2>Recent Blog Posts</h2>
-    <p>In commodi voluptatem excepturi quaerat nihil error autem voluptate ut et officia consequuntu</p>
-  </div> -->
-
-  <div class="row gy-5">
-
-
-    <!-- 게시글 1번째 -->
-    <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-      <div class="post-item position-relative h-100">
-
-        <div class="post-img position-relative overflow-hidden">
-          <img src="assets_notice/img/blog/blog-1.jpg" class="img-fluid" alt="">
-          <span class="post-date">July </span>
-        </div>
-
-        <div class="post-content d-flex flex-column">
-
-          <h3 class="post-title">클라인즈 홈페이지 리뉴얼 안내</h3>
-
-          <div class="meta d-flex align-items-center">
-            <div class="d-flex align-items-center">
-              <i class="bi bi-person"></i> <span class="ps-2">KLEINZ</span>
-            </div>
-            <span class="px-3 text-black-50">/</span>
-            <div class="d-flex align-items-center">
-              <i class="bi bi-folder2"></i> <span class="ps-2">2023. 07 .27</span>
+              </div><!-- End Tags -->
+  
             </div>
           </div>
-
-          <hr>
-
-          <a href="sub3-1-1.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
-
         </div>
-
-      </div>
-    </div><!-- End post item -->
-
-    <!-- 게시글 2번째
-    <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-      <div class="post-item position-relative h-100">
-
-        <div class="post-img position-relative overflow-hidden">
-          <img src="assets_notice/img/blog/blog-2.jpg" class="img-fluid" alt="">
-          <span class="post-date">July 17</span>
-        </div>
-
-        <div class="post-content d-flex flex-column">
-
-          <h3 class="post-title">Et repellendus molestiae qui est sed omnis</h3>
-
-          <div class="meta d-flex align-items-center">
-            <div class="d-flex align-items-center">
-              <i class="bi bi-person"></i> <span class="ps-2">Mario Douglas</span>
-            </div>
-            <span class="px-3 text-black-50">/</span>
-            <div class="d-flex align-items-center">
-              <i class="bi bi-folder2"></i> <span class="ps-2">Sports</span>
-            </div>
-          </div>
-
-          <hr>
-
-          <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
-
-        </div>
-
-      </div>
-    </div> -->
-    <!-- End post item -->
-
-
-
-    <!-- 게시글 3번째
-    <div class="col-xl-4 col-md-6">
-      <div class="post-item position-relative h-100" data-aos="fade-up" data-aos-delay="300">
-
-        <div class="post-img position-relative overflow-hidden">
-          <img src="assets_notice/img/blog/blog-3.jpg" class="img-fluid" alt="">
-          <span class="post-date">September 05</span>
-        </div>
-
-        <div class="post-content d-flex flex-column">
-
-          <h3 class="post-title">Quia assumenda est et veritati tirana ploder</h3>
-
-          <div class="meta d-flex align-items-center">
-            <div class="d-flex align-items-center">
-              <i class="bi bi-person"></i> <span class="ps-2">Lisa Hunter</span>
-            </div>
-            <span class="px-3 text-black-50">/</span>
-            <div class="d-flex align-items-center">
-              <i class="bi bi-folder2"></i> <span class="ps-2">Economics</span>
-            </div>
-          </div>
-
-          <hr>
-
-          <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
-
-        </div>
-
-      </div>
-    </div> -->
-
-  </div>
-
-  </div>
-</section>
-<!-- End Recent Blog Posts Section -->
+      </section>
+    </main><!-- End #main -->
 
 
 
 
-
-		  
-
-
-
+      
     <!-- ======= Footer assets4 스타일시트 푸터에서 수정 ======= -->
 	<footer id="footer2">
 		<div class="container2">
@@ -374,17 +367,28 @@
 <!-- 최상단버튼 -->
 <!-- <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a> -->
 
+<!-- Vendor JS Files -->
+<script src="assets4/vendor/purecounter/purecounter_vanilla.js"></script>
+<script src="assets4/vendor/aos/aos.js"></script>
+<script src="assets4/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets4/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets4/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="assets4/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="assets4/vendor/php-email-form/validate.js"></script>
+
+<!-- Template Main JS File -->
+<script src="assets4/js/main.js"></script>
 
 
-  <!-- 공지사항 Vendor JS Files -->
-  <script src="assets_notice/vendor/aos/aos.js"></script>
-  <script src="assets_notice/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets_notice/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets_notice/vendor/purecounter/purecounter_vanilla.js"></script>
 
-  <!-- 공지사항 Template Main JS File -->
-  <script src="assets_notice/js/main.js"></script>
+  <!-- 뉴스 상세 JS Files -->
+  <script src="assets_news/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets_news/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets_news/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets_news/vendor/aos/aos.js"></script>
 
+  <!-- 뉴스 상세 Main JS File -->
+  <script src="assets_news/js/main.js"></script>
 
 
 		<!--탑메뉴-->
