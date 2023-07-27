@@ -1680,31 +1680,33 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Service Details Section
+# 연혁 Details Section
 --------------------------------------------------------------*/
 .service-details .services-list {
+  max-width: 70%;
+  font-size: 20px;
   padding: 10px 30px;
   border: 1px solid #d5d7da;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .service-details .services-list a {
   display: block;
   line-height: 1;
-  padding: 8px 0 8px 15px;
+  font-size: 21px;
+  padding: 8px 10px 8px 10px;
   border-left: 3px solid #d9e3e8;
-  margin: 20px 0;
+  margin: 15px 0px;
   color: var(--color-secondary);
   transition: 0.3s;
+  color: #838893;
 }
 
-.service-details .services-list a.active {
-  font-weight: 700;
-  border-color: var(--color-primary);
-}
+
 
 .service-details .services-list a:hover {
   border-color: var(--color-primary);
+  color: #000;
 }
 
 .service-details .services-img {
@@ -1712,17 +1714,21 @@ section {
 }
 
 .service-details h3 {
-  font-size: 28px;
+  font-size: 42px;
   font-weight: 700;
 }
 
 .service-details h4 {
-  font-size: 20px;
+  text-align: left;
+  font-size: 25px;
   font-weight: 700;
 }
 
 .service-details p {
-  font-size: 15px;
+  margin-top: 20px;
+  text-align: left;
+  line-height: 27px;
+  font-size: 20px;
 }
 
 .service-details ul {
@@ -1739,7 +1745,6 @@ section {
 
 .service-details ul i {
   font-size: 20px;
-  margin-right: 8px;
   color: var(--color-primary);
 }
 
