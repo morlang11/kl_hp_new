@@ -858,7 +858,6 @@ div.content{width:1400px;margin:0 auto}
 }
  
 .header2 .logo2 {
-
 	margin-right: 50px;
 }
 
@@ -1545,7 +1544,6 @@ h5{
   }
   
 
-
 .history h5 {
   color: #ad0b0b;	
   position: relative;
@@ -1572,10 +1570,10 @@ box-sizing: border-box;
 margin-left: 13px;
 }
 
-.history div {position: relative; padding: 0 0 0 48px;}
-.history div:before { content:""; position:absolute; left:8px; top:0;
+.history div {position: relative; padding: 0 0 0 58px;}
+.history div:before { content:""; position:absolute; left: 18px; top: 0;
   width: 2px; height:100%; background:#ddd;}
-.history div:first-child:before {top:10px; height:calc(100% - 10px);}
+.history div:first-child:before {top:0px; height:calc(100% - 10px);}
 
 
 .history ol {
@@ -1637,6 +1635,23 @@ margin: 5em;
 }
 
 
+/* cibi, 오시는길 탭메뉴 페이지 애니메이션 */
+.zoom-in {
+	animation-name: zoomIn;
+	animation-duration: 1s;
+	animation-fill-mode: both;
+  }
+  
+  @keyframes zoomIn {
+	from {
+	  transform: scale(0);
+	  opacity: 0;
+	}
+	to {
+	  transform: scale(1);
+	  opacity: 1;
+	}
+  }
 
 
 
