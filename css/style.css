@@ -793,7 +793,6 @@ box-shadow:         inset 0px -4px 5px -4px rgba(50, 50, 50, 0.55);
 
 .main-menu li:hover>a,nav.main-menu li.active>a,.dropdown-menu>li>a:hover,.dropdown-menu>li>a:focus,.dropdown-menu>.active>a,.dropdown-menu>.active>a:hover,.dropdown-menu>.active>a:focus,.no-touch .dashboard-page nav.dashboard-menu ul li:hover a,.dashboard-page nav.dashboard-menu ul li.active a {
 color:#fff;
-background-color:#00bbbb;
 text-shadow: 0px 0px 0px; 
 }
 .area {
@@ -818,7 +817,7 @@ a{text-decoration:none}
 div.content{width:1400px;margin:0 auto}
 .hide {display:none}
 
-
+/* pc 스크롤 메뉴*/
 /* 스크롤 메뉴 */
 .scroll_01{background: rgb(0,0,0);
 	background: #ffffff00;}
@@ -828,6 +827,15 @@ div.content{width:1400px;margin:0 auto}
 	z-index:-100;width:100%; height: 76px; padding:-100px 0;
 	text-align:center;transform:translate(-50%);transition:all .3s}
 
+
+/* 모바일 스크롤 메뉴*/
+/* 스크롤 메뉴 */
+.scroll_02{background: rgb(255, 255, 255);}
+  
+  /* 아래로 스크롤하면 배경이 사라지고 위로 스크롤 하면 배경이 생깁니다. */
+  .scroll_02{position:fixed;top:0;left:50%; 
+	z-index:10; width:100%; height: 86px; padding:-100px 0;
+	transform:translate(-50%);}
 
 
 
@@ -840,7 +848,6 @@ div.content{width:1400px;margin:0 auto}
 	left: 0px;
 	margin-bottom: 30px;
 	/* margin-left: calc(0% - 100px); */
-	margin-bottom: 30px;
 	width: 100%;
 	height: 70px;
 	font-size: 17px;
@@ -870,7 +877,7 @@ div.content{width:1400px;margin:0 auto}
 }
 
 .gnb > li {
-  margin: 0 1em;
+  margin: 0 1%;
 }
 
 .gnb > li > a {
@@ -981,6 +988,257 @@ div.content{width:1400px;margin:0 auto}
 .gnb_sub:hover + li:hover > a:before {
   width: 50%;
 }
+
+
+/* 모바일 헤더 영역 시작 */
+	/* 모바일 메뉴 상위 카테고리 active시 색상변경 */
+	.dropdown.active .listStyle_main {
+		color:#e60012;
+		font-weight: 600;
+	}
+
+
+
+	.dropdown.active .m_menu_guide {
+		display: block;
+		border-color:#e60012;
+	}
+
+	.dropdown.active {
+		height: auto; /* 드롭다운 내용의 높이에 따라 자동으로 높이 조정 */
+	}
+
+
+	/* 구분선 */
+	hr.m_menu_guide{
+		display: block;
+		border-color: #e60012;
+	}
+
+
+	/* 기존 CSS에 아래 코드를 추가합니다. */
+	.menuList {
+	margin-top: 100px;
+	list-style: none;
+	color:#222222;
+	font-size: 18px;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.3s ease-out; /* 드롭다운 애니메이션 효과를 추가합니다. */
+	}
+
+	.menuWrap.on .menuList {
+	max-height: 500px; /* 적절한 높이로 조정해주세요. */
+}
+
+
+	.dropdown {
+	position: relative;
+	cursor: pointer;
+	margin: 50px;
+	}
+
+	.subMenu {
+		display: none;
+		color:#2a2a2a;
+		font-size: 15px;
+		/* 수정된 스타일 */
+		list-style: none; /* li 요소의 기본 목록 마커를 제거합니다. */
+		margin: 0; /* li 요소의 기본 마진을 제거합니다. */
+		padding: 0; /* li 요소의 기본 패딩을 제거합니다. */
+		left: 100%;
+		margin-left: 10px; /* 드롭다운 아이콘과 li 요소 사이의 간격 조정 */
+		line-height: 30px;
+	}
+
+
+		/* 드롭다운 아이콘 스타일 수정 */
+		.dropdown:after {
+		content: "\25BE";
+		position: absolute;
+		right: 10px;
+		top: 50%;
+		transform: translateY(-50%);
+		color:#e60012;
+		font-size: 22px;
+		pointer-events: none; /* 드롭다운 아이콘은 클릭 이벤트를 무시합니다. */
+		}
+
+	/* 추가한 CSS로 액티브한 ul의 위치 설정 */
+	.dropdown.active .subMenu {
+	display: block;
+	/* 수정된 스타일 */
+	top: 0;
+	left: 100%;
+	margin-top: -10px; /* ul이 보여질 때 위치를 조정합니다. */
+	margin-left: 10px;
+	}
+
+  .navBox {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-weight: bold;
+	font-size: 1.6em;
+	margin: 5px;
+  }
+
+  
+  .iconBtn {
+	width: 35px;
+	cursor: pointer;
+  
+  }
+  .menuWrap.on {
+	right: 0;
+  }
+
+	/* .menuWrap 스타일 */
+	.menuWrap {
+		z-index: 1;
+		position: fixed;
+		top: 0;
+		right: -38vh;
+		width: 38vh;
+		height: 100%;
+		padding: 2em 20px;
+		font-size: 0.8em;
+		box-sizing: border-box;
+		transition: right 0.3s ease-in-out;
+		background-color: #ffffffd4;
+		box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+	}
+  
+  #menuBtn {
+	z-index: 12;
+	display: inline-flex;
+	position: fixed;
+	top: 20px;
+	right: 30px;
+	width: 35px;
+	transition: all 0.3s ease-in-out;
+	cursor: pointer;
+  }
+  #dimmed {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+  }
+  .btnRotate {
+	transform: rotate(-90deg);
+	transition: all 0.3s ease-in-out;
+  }
+  
+  .logo3 {
+	z-index: 13;
+	display: none; /* 기본적으로 숨깁니다. */
+	position: fixed;
+	left: 20px;
+	top: 30px;
+}
+
+  
+  /* 모바일 여기서수정 */
+  @media screen and (max-width: 872px){
+	/* 백그라운드 배경 */
+	header {
+		display: flex;
+		background-position: center;
+		justify-content: center; /* 수평 가운데 정렬 */
+		align-items: center; /* 수직 가운데 정렬 */
+		width: 100%;
+		background-size:contain;
+		margin-top: 85px; /* 상단 여백 85px 추가 */
+		background: url('../img/nepal.gif') center/cover no-repeat; /* 배경 이미지 가운데 정렬 */
+		background-color: white !important;
+	  }
+
+	  /* 최상단 tv */
+	  header .carousel-iphone{
+		margin-right: auto;
+		margin-left: auto;
+		width: 200px;
+		height: 672px;
+		background: url('../img/iphone-front.png') no-repeat;
+		background-size: 20%;
+	}
+	
+	/* 중간 tv */
+	.detail .app-screenshot{
+		overflow: hidden;
+		overflow: hidden;
+		margin-right: auto;
+		margin-left: auto;
+		margin-top: 28px;
+		width: 388px;
+		height: 450px;
+		background: url('../img/iphone-front.png') no-repeat;
+		background-size: 100%;
+	}
+	
+	
+	.detail .app-screenshot img{
+		margin-right: auto;
+		margin-left: auto;
+		padding-left: 0px;
+		padding-top: 3px;
+		width: 378px;
+	}
+
+
+
+	.logo3 {
+		display: block;
+	}
+
+  .gnb{
+  display: none;
+  }
+  .container{
+	/* display: none; */
+  }
+
+  .scroll_01{
+	display: none;
+  }
+
+  a:hover{ 
+	color: #e60012;
+	font-weight: 600;
+  }
+}
+
+
+  @media screen and (min-width: 873px) and (max-width: 1080px){
+  .logo{
+	display: none;
+  }
+  }
+  
+  @media screen and (min-width: 873px){
+	.navBox{
+	  display: none;
+	  }
+	
+	/* 스크롤 메뉴 */
+	.scroll_01{background: rgba(0, 0, 0, 0);
+	}
+
+	.scroll_02{
+		display: none;
+	  }
+	}
+
+/* 모바일 헤더영역 끝 */
+
+
 
 
 
@@ -1166,7 +1424,7 @@ margin-top: 250px;
   
   .category_text_area_1 .container {
 	position: relative;
-	z-index: 1;
+	z-index: -1;
 	color: white;
   }
   
@@ -1275,18 +1533,15 @@ margin-top: 250px;
   }
   
 
-
   /* FAQ 카테고리명 소분류 */
   span.category{
 	color: #e60012;
 	margin-right: 10px;
   }
 
-
 /*-----------------------------------------------------------------------------------*/
 /*	DETAIL
 /*-----------------------------------------------------------------------------------*/
-
 .detail{
 	overflow: hidden;
 	padding: 50px 0px 0px 0px;
@@ -1499,8 +1754,6 @@ h5{
 	line-height: 1.7;
 	margin-bottom: -20px;
 }
-
-
 
 
 .box_wrap2 {
