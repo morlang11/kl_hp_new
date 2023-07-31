@@ -168,8 +168,6 @@ header h1,
 
 
 
-
-
 /* 연혁 */
 .main5 .container5 {
 	width: 100%;
@@ -778,8 +776,12 @@ box-shadow:         inset 0px -4px 5px -4px rgba(50, 50, 50, 0.55);
 
 /* Darker element side menu End*/
 
+/* 여백 그대로 */
+.brank0{
+	margin: 0%;
+}
 
-/* 여백 추가할때 */
+
 /* 작은여백 */
 .brank{
 	margin: 5%;
@@ -789,6 +791,10 @@ box-shadow:         inset 0px -4px 5px -4px rgba(50, 50, 50, 0.55);
 	margin: 15%;
 }
 
+/* 여백 줄일때 */
+.brank3{
+	margin: -85%;
+}
 
 
 .main-menu li:hover>a,nav.main-menu li.active>a,.dropdown-menu>li>a:hover,.dropdown-menu>li>a:focus,.dropdown-menu>.active>a,.dropdown-menu>.active>a:hover,.dropdown-menu>.active>a:focus,.no-touch .dashboard-page nav.dashboard-menu ul li:hover a,.dashboard-page nav.dashboard-menu ul li.active a {
@@ -1147,51 +1153,6 @@ div.content{width:1400px;margin:0 auto}
   
   /* 모바일 여기서수정 */
   @media screen and (max-width: 872px){
-	/* 백그라운드 배경 */
-	header {
-		display: flex;
-		background-position: center;
-		justify-content: center; /* 수평 가운데 정렬 */
-		align-items: center; /* 수직 가운데 정렬 */
-		width: 100%;
-		background-size:contain;
-		margin-top: 85px; /* 상단 여백 85px 추가 */
-		background: url('../img/nepal.gif') center/cover no-repeat; /* 배경 이미지 가운데 정렬 */
-		background-color: white !important;
-	  }
-
-	  /* 최상단 tv */
-	  header .carousel-iphone{
-		margin-right: auto;
-		margin-left: auto;
-		width: 200px;
-		height: 672px;
-		background: url('../img/iphone-front.png') no-repeat;
-		background-size: 20%;
-	}
-	
-	/* 중간 tv */
-	.detail .app-screenshot{
-		overflow: hidden;
-		overflow: hidden;
-		margin-right: auto;
-		margin-left: auto;
-		margin-top: 28px;
-		width: 388px;
-		height: 450px;
-		background: url('../img/iphone-front.png') no-repeat;
-		background-size: 100%;
-	}
-	
-	
-	.detail .app-screenshot img{
-		margin-right: auto;
-		margin-left: auto;
-		padding-left: 0px;
-		padding-top: 3px;
-		width: 378px;
-	}
-
 
 
 	.logo3 {
@@ -2248,22 +2209,135 @@ margin-left: 8%;
 /*-----------------------------------------------------------------------------------*/
 /*	MEDIA QUERIES
 /*-----------------------------------------------------------------------------------*/
+@media (min-width:992px) {
+ .brank3{
+	display: none;
+ }
+
+}
+
 
 @media (max-width:768px) {
-	
+	.brank3{
+		display: block;
+	 }
+
 	header{
-		padding-bottom: 50px;
-		min-height: 1000px;
-		height: 100%;
+		display: flex;
+		background-position: center;
+		justify-content: center; /* 수평 가운데 정렬 */
+		align-items: center; /* 수직 가운데 정렬 */
+		width: 100%;
+		background-size:contain;
+		margin-top: 85px; /* 상단 여백 85px 추가 */
+		background: url('../img/nepal.gif') center/cover no-repeat; /* 배경 이미지 가운데 정렬 */
 	}
 	
+	.top_text{
+		display: block;
+		margin-top: 120px; /* 상단 여백 85px 추가 */
+		margin-bottom: 10px;
+	}
+
+
+	.kle_text{
+		display: inline-block;
+		justify-content: center;
+		margin: 3%;
+		font-size: 25px;
+		color: #343434;
+	  }
+	
+	
+	  span.kle_text{
+		display: inline-block;
+		font-family: 'Gowun Batang', serif;
+		font-size: 25px;
+		color: #343434;
+		font-weight: 400;
+		line-height: 50px;
+		letter-spacing: -1px;
+		word-spacing:-2px;
+		font-style: italic;
+	  }
+	
+	  span.kle_text_2{
+		display: block;
+		font-family: 'Gowun Batang', serif;
+		color: #d20000;
+		font-size: 38px;
+		font-weight: 800;
+		letter-spacing: -1px;
+		word-spacing:-2px;
+		font-style: italic;
+	  }
+
+	  
 	.navbar-nav {
 		float: left;
 		text-align: left;
 }
 
+	/* 모바일 화면에서만 적용되는 스타일 */
+	.quickmenu {
+		position: fixed;
+		bottom: 120px;
+		right: 4px;
+		top: auto;
+	}
+
+
 	
+.feature_main_text{
+	display: flex;
+	font-size: 35px;
+	margin: 10px;
+	line-height: 30px;
+	font-weight: 600;
+	text-align: left;
+	color: #e60012;
+	margin-top: 50px;
 }
+
+
+.feature_sub_text{
+	font-size: 20px;
+	margin: 10px;
+	line-height: 30px;
+	font-weight: 300;
+	text-align: left;
+	color: #030303;
+	margin-top: 20px;
+	margin-bottom: 70px;
+}
+
+
+
+/* 메인페이지 배너 삽입 문구 */
+.company_intro{
+	display: block;
+	text-align: left;
+	margin: 20px;
+	font-size: 30px;
+	line-height: 40px;
+	font-weight: 500;
+	color: #fff;
+}
+
+.company_intro2{
+	margin: 20px;
+	text-align: left;
+	font-size: 22px;
+	line-height: 30px;
+	font-weight: 300;
+	color: #fff;
+	margin-bottom: 30px;
+}
+	
+
+
+}
+
 
 @media (max-width:992px) {
 
@@ -2286,9 +2360,6 @@ header, .social{
 	min-height: 200px;
 }
 
-
-
-
 .payoff h1{
 	font-size: 24px;
 }
@@ -2299,22 +2370,44 @@ header, .social{
 
 }
 
+
 @media (max-width:480px){
+	.top_text{
+		display: block;
+		margin-top: 100px; /* 상단 여백 85px 추가 */
+		margin-bottom: 10px;
+	}
 
 	header .carousel-iphone, .detail .app-screenshot{
-		width: 280px;
+		width: 350px;
 	}
 	
 	header .carousel, .detail .app-screenshot img{
-		padding-top: 85px;
-		width: 245px;
+		padding-top: 4px;
+		padding-left: 1px;
+		padding-right: 2px;
+		width: 343px;
 	}
+	
+	.detail .app-screenshot{
+		overflow: hidden;
+		margin-right: auto;
+		margin-left: auto;
+		width: 388px;
+		height: 450px;
+		background: url('../img/iphone-front.png') no-repeat;
+		background-size: 100%;
+	}
+	
 	
 	.detail .app-screenshot img{
-		margin-top: -12px;
-		padding-top: 0px;
+		margin-top: 1px;
+		margin-right: 10px;
+		margin-left: 4px;
+		width: 376px;
 	}
-	
+
+
 	header{
 		padding-top: 30px;
 		padding-bottom: 0px;
@@ -2331,6 +2424,24 @@ header, .social{
 	.features col-md-4{
 		margin-bottom: 50px;
 	}
+
+	.payoff{
+		display: flex;
+		background-position: center;
+		justify-content: center; /* 수평 가운데 정렬 */
+		align-items: center; /* 수직 가운데 정렬 */
+		padding-top: 50px;
+		padding-bottom: 50px;
+		width: 100%;
+		min-height: 500px;
+	}
+	
+	
+	.payoff h1{
+		font-size: 24px;
+	}
+
+	
 	
 }
 
