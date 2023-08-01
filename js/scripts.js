@@ -163,3 +163,43 @@ $('.detail .carousel').carousel({
   interval: 4000
 })
 
+
+
+
+
+// 이전 스크립트를 수정한 내용
+$(document).ready(function () {
+  // Check if it's a touch-enabled device
+  var isTouchDevice = 'ontouchstart' in document.documentElement;
+
+  // If it's a touch-enabled device, use gyroscope effect; otherwise, use parallax effect
+  if (isTouchDevice) {
+    // Use gyroscope effect for touch devices
+    // 해당 부분은 모바일에서 이미지를 고정시키는 역할을 합니다. 삭제하고 다음 스크립트로 대체합니다.
+  } else {
+    // Use parallax effect for non-touch devices
+    $(window).scroll(function () {
+      parallax();
+    });
+  }
+});
+
+// 모바일에서도 스크롤 이벤트를 감지하도록 수정한 내용
+var lastScrollTop = 0;
+
+$(window).scroll(function (event) {
+  var st = $(this).scrollTop();
+  if (st > lastScrollTop) {
+    // 아래로 스크롤하는 경우
+    $('.social').css('background-position-y', '-=1');
+  } else {
+    // 위로 스크롤하는 경우
+    $('.social').css('background-position-y', '+=1');
+  }
+  lastScrollTop = st;
+});
+
+
+
+
+
