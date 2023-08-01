@@ -68,7 +68,7 @@
 				 <div class="col-md-12">
 					<div class="top_text">
 					  <!-- <h1>따뜻한 배려, 클라인즈</h1> -->
-					  <a class="main_brand" href=""><img src="img/texture_top.png" alt="top_text" div data-aos="zoom-out" data-aos-easing="ease-out-cubic" data-aos-duration="900"></a>
+					  <a class="main_brand" href=""><img src="img/texture_top.png" alt="top_text" data-aos="zoom-out" data-aos-easing="ease-out-cubic" data-aos-duration="900"></a>
 					  <!-- <p class="lead">따뜻한 배려, 클라인즈</p> -->
 					  
 					  <div class="carousel-iphone">
@@ -265,15 +265,34 @@
 
 	  <section class="payoff">
 		<div class="container">
-			  <div class="row">
-				  <div class="col-md-12">
+			<div class="row">
+				<div class="col-md-12">
 					  <div class="company_intro">자가 공장을 보유하고 있는 국내 제조사</div>
 					  <div class="company_intro2">전문 엔지니어들의 연구, 제조, 품질관리 및 자동화 제조라인을 통한 안정적인 제품생산과<br>2000평의 넓고 쾌적한 대형 물류 창고를 보유하고 있습니다.</div>
 				  </div>
 			  </div>
 		  </div>	  
 	  </section>
-	  
+	  <!-- 해당 스크립트를 추가해주세요. -->
+<script>
+	// 모바일에서도 스크롤 이벤트를 감지하여 이미지가 움직이도록 수정한 내용
+	var lastYPos = 0;
+	$(window).on('touchmove', function (event) {
+	  var yPos = event.originalEvent.touches[0].clientY;
+	  if (yPos > lastYPos) {
+		// 아래로 스크롤하는 경우
+		var backgroundPositionY = $('.payoff').css('background-position-y');
+		var newPos = parseFloat(backgroundPositionY) - 1;
+		$('.payoff').css('background-position-y', newPos + 'px');
+	  } else {
+		// 위로 스크롤하는 경우
+		var backgroundPositionY = $('.payoff').css('background-position-y');
+		var newPos = parseFloat(backgroundPositionY) + 1;
+		$('.payoff').css('background-position-y', newPos + 'px');
+	  }
+	  lastYPos = yPos;
+	});
+	</script>
 	  <!-- DETAILS 
 	      ================================================== -->
 	  <section class="detail">
@@ -387,8 +406,8 @@
 				  <div class="row">
 					  <div class="col-md-12">
 						   <div class="online_text">온라인 상담</div>
-						   <a class="product_icon"><a href="tel:010-9040-9720" target="_blank"><img src="img/inquiry_icon_01.png" class="" alt=""></a></a>
-						   <a class="product_icon"><a href="https://pf.kakao.com/_TYcMxb" target="_blank"><img src="img/inquiry_icon_02.png" class="" alt=""></a></a>
+						   <a class="product_icon2"><a href="tel:010-9040-9720" target="_blank"><img src="img/inquiry_icon_01.png" class="" alt=""></a></a>
+						   <a class="product_icon2"><a href="https://pf.kakao.com/_TYcMxb" target="_blank"><img src="img/inquiry_icon_02.png" class="" alt=""></a></a>
 						   <a class="product_icon"><a href="tel:1644-9721" target="_blank"><img src="img/inquiry_icon_03.png" class="" alt=""></a></a>
 					   </div>
 				  </div>
