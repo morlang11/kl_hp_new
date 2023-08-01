@@ -157,6 +157,49 @@
 }
 
 
+/* 모바일용 */
+@media (max-width: 767px) {
+
+/* 대표싸인 */
+.ceo_sign_img_wrapper {
+  display: inline-block;
+}
+
+
+.ceo_sign_img img{
+  text-align: right;
+  margin-top: 5%;
+  margin-right: 0%;
+  width: 90%;
+}
+
+
+
+  /* 오시는길 */
+  .회사소개_main_text {
+    display: inline-block;
+    font-size: 30px;
+    font-weight: 600;
+    color: #000000;
+    margin-top: 30%;
+    margin-bottom: 10%;
+    margin: 30px;
+  }
+  
+  .회사소개_sub_text {
+    display: inline-block;
+    align-items: center;
+    text-align: left;
+    font-size:20px;
+    margin: 10px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #000000;
+    max-width: 1000px;
+  }
+}
+
+
 /*--------------------------------------------------------------
 # Sections & Section Header
 --------------------------------------------------------------*/
