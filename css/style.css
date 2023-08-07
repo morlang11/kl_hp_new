@@ -29,6 +29,8 @@ _/_/_/_/    _/_/_/  _/    _/    _/_/_/    _/_/_/
 
 
 
+
+
 /*-----------------------------------------------------------------------------------*/
 /* GENERAL
 /*-----------------------------------------------------------------------------------*/
@@ -166,6 +168,79 @@ header h1,
 	font-size: 20px;
 	font-weight: 100;
   }
+
+
+
+
+/*--------------------------------------------------------------
+# 연혁 Details Section
+--------------------------------------------------------------*/
+.service-details .services-list {
+	max-width: 70%;
+	font-size: 20px;
+	padding: 10px 30px;
+	border: 1px solid #d5d7da;
+	margin-bottom: 30px;
+  }
+  
+  .service-details .services-list a {
+	display: block;
+	line-height: 1;
+	font-size: 21px;
+	padding: 8px 10px 8px 10px;
+	border-left: 3px solid #d9e3e8;
+	margin: 15px 0px;
+	color: var(--color-secondary);
+	transition: 0.3s;
+	color: #838893;
+  }
+  
+  
+  
+  .service-details .services-list a:hover {
+	border-color: var(--color-primary);
+	color: #000;
+  }
+  
+  .service-details .services-img {
+	margin-bottom: 20px;
+  }
+  
+  .service-details h3 {
+	font-size: 42px;
+	font-weight: 700;
+  }
+  
+  .service-details h4 {
+	text-align: left;
+	font-size: 25px;
+	font-weight: 700;
+  }
+  
+  .service-details p {
+	margin-top: 20px;
+	text-align: left;
+	line-height: 27px;
+	font-size: 20px;
+  }
+  
+  .service-details ul {
+	list-style: none;
+	padding: 0;
+	font-size: 15px;
+  }
+  
+  .service-details ul li {
+	padding: 5px 0;
+	display: flex;
+	align-items: center;
+  }
+  
+  .service-details ul i {
+	font-size: 20px;
+	color: var(--color-primary);
+  }
+  
 
 
 
@@ -417,6 +492,38 @@ span.thum_title_text{
     text-align: left;
 	font-size: 15px;
 	line-height: 20px;
+  }
+
+  .kle_text_m{
+	display: none;
+	justify-content: center;
+	margin: 3%;
+	margin-top: -280px;
+	font-size: 25px;
+	color: #343434;
+  }
+
+span.kle_text_m{
+	display: none;
+	font-family: 'Gowun Batang', serif;
+	font-size: 25px;
+	color: #343434;
+	font-weight: 400;
+	line-height: 50px;
+	letter-spacing: -1px;
+	word-spacing:-2px;
+	font-style: italic;
+  }
+
+  span.kle_text_2_m{
+	display: none;
+	font-family: 'Gowun Batang', serif;
+	color: #d20000;
+	font-size: 38px;
+	font-weight: 800;
+	letter-spacing: -1px;
+	word-spacing:-2px;
+	font-style: italic;
   }
 
 
@@ -1160,6 +1267,312 @@ div.content{width:1400px;margin:0 auto}
 
 
 
+/* 회사개요 파트 */
+/* 피시용 이미지 */
+/* 회사소개 이미지 */
+.alt-services .img-bg2 {
+	background-size: cover;
+	background-position: center center;
+	width: 600px;
+	height: 500px;
+  }
+  
+  
+  /* 경영이념 이미지 */
+  .alt-services .img-bg {
+	background-size: cover;
+	background-position: center center;
+	min-height: 400px;
+	margin-right: 5%;
+  }
+  
+
+/* 회사소개 페이지 최상단 텍스트 */
+
+.회사소개_main_text {
+	display: inline-block;
+	font-size: 38px;
+	font-weight: 600;
+	color: #000000;
+	margin-top: 30%;
+	margin-bottom: 10%;
+	margin: 30px;
+  }
+  
+  .회사소개_sub_text {
+	display: inline-block;
+	align-items: center;
+	text-align: left;
+	font-size: 22px;
+	font-weight: 400;
+	line-height: 40px;
+	color: #000000;
+	max-width: 1000px;
+  }
+  
+  .payoff_main_회사소개_bar {
+	margin-bottom: 4%;
+  }
+  
+  .ceo_main{
+	display: block;
+	width: 100%;
+  }
+  
+  /* 회사소개_CEO 인사말 */
+  .ceo_main1_text {
+	margin-top: 30px;
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 30px;
+	text-align: left;
+  }
+  
+  .ceo_main2_text {
+	margin-top: 30px;
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 20px;
+	text-align: left;
+  }
+  
+  
+  .ceo_sub_text {
+	display: flex;
+	margin-top: 20px;
+	font-size: 15px;
+	line-height: 30px;
+	text-align: left;
+  }
+  
+  
+  .company_intro_warm {
+	color: #e60012;
+	font-size: 24px;
+	font-weight: 700;
+  }
+  
+  .tech_text_detail{
+	display: inline-block;
+	font-size: 18px;
+	line-height: 30px;
+	text-align: left;
+  }
+
+
+  /* 대표싸인 */
+  .ceo_sign_img_wrapper {
+	display: inline-block;
+  }
+  
+  
+  .ceo_sign_img{
+	text-align: right;
+	margin-top: 5%;
+	margin-right: 0%;
+  }
+  
+  /* ci&bi*/
+  .cibi_img_wrapper {
+	display: inline-block;
+  }
+  
+  .cibi_img{
+	margin-top: -5%;
+	margin-right: 0%;
+  }
+  
+  
+  .cibi_sub_text {
+	max-width: 83%;
+	margin-left: 8%;
+	margin-top: 30px;
+	font-size: 15px;
+	line-height: 30px;
+	text-align: left;
+  }
+  
+  .cibi_intro_warm {
+	font-size: 24px;
+	font-weight: 700;
+  }
+  
+
+  
+  /* 사업소개 이미지 */
+  .business_img{
+	text-align: right;
+	margin-right: 0%;
+	margin-top: 0%;
+	margin-bottom: 30px;
+  }
+  
+  .business_img_wrapper {
+	display: inline-block;
+  }
+  
+
+  
+  .business_sub_text2 {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 0px;
+	font-size: 15px;
+	line-height: 30px;
+	text-align: left;
+  }
+  
+  .business_intro_warm {
+	display: inline-block;
+	width: 950px;
+	text-align: left;
+	font-size: 30px;
+	line-height: 45px;
+	font-weight: 700;
+	padding-bottom: 16px;
+  }
+  
+  .business_intro_text {
+	display: inline-block;
+	align-items: center;
+	width: 950px;
+	text-align: left;
+	font-size: 17px;
+	font-weight: 400;
+	line-height: 20px;
+  }
+
+  /* 사업영역 자세히 보기 버튼 */
+  .business_area_btn{
+	display: inline-block;
+	width: 950px;
+	text-align: right;
+	margin-top: 30px;
+  }
+  
+
+  .business_img_wrapper {
+	overflow: hidden;
+  }
+  
+  .business_img {
+	transition: transform 0.3s ease-in-out;
+  }
+  
+  .business_img_wrapper:hover .business_img {
+	transform: scale(1.04);
+  }
+
+.ceo_main{
+	display: block;
+	max-width: 1000px;
+	font-size: 1.2em;
+	line-height: 35px;
+}
+  
+/* 디스플레이 B2B 비즈니스 영역
+--------------------------------*/
+.section-header {
+	margin-bottom: 60px;
+	position: relative;
+  }
+  
+  .section-header::before {
+	content: "";
+	position: absolute;
+	display: block;
+	width: 60px;
+	height: 5px;
+	background: #f82249;
+	bottom: 0;
+	left: calc(50% - 25px);
+  }
+  
+  .section-header h2 {
+	font-size: 36px;
+	text-align: center;
+	font-weight: 700;
+	margin-bottom: -70px;
+  }
+  
+  .section-header p {
+	text-align: center;
+	padding: 0;
+	margin: 0;
+	font-size: 18px;
+	font-weight: 500;
+	color: #9195a2;
+  }
+  
+  .section-with-bg {
+	background-color: #f6f7fd;
+  }
+  
+  
+	  .portfolio_img {
+		  display: flex;
+		  justify-content: space-between;
+		  margin-top: 20px;
+	  }
+  
+	  .portfolio_img .image_container {
+		  position: relative;
+		  width: 300px;
+		  height: 320px;
+		  overflow: hidden;
+		  margin: 0px 10px;
+		  border: 1px solid #d4d4d4;
+		  border-radius: 15px;
+	  }
+  
+	  .portfolio_img .image_container img {
+		  width: 100%;
+		  transition: transform 0.3s;
+	  }
+  
+	  .portfolio_img .image_container:hover img {
+		  transform: scale(1.1);
+	  }
+  
+	  .portfolio_img .image_container .text_container {
+		  position: absolute;
+		  bottom: 0;
+		  left: 0;
+		  width: 100%;
+		  height: 100px;
+		  background-color: #f2f2f2;
+		  padding: 10px;
+		  line-height: 20px;
+		  font-size: 11px;
+		  box-sizing: border-box;
+	  }
+  
+	  .portfolio_img .image_container .image_description {
+		  text-align: center;
+		  margin-top: 5px;
+		  font-size: 20px;
+		  font-weight: 500;
+		  line-height: 30px;
+	  }
+  
+	  .portfolio_img .image_container .text_container p {
+		  margin: 0;
+		  overflow: hidden;
+		  text-overflow: ellipsis;
+		  /* white-space: nowrap; */
+	  }
+  
+	  .image_description_text_detail{
+	  display: inline-block;
+	  font-size: 13px;
+	  line-height: 20px;
+	  max-width: 98%;
+	  }
+
+
+
+
   @media screen and (min-width: 873px) and (max-width: 1080px){
   .logo{
 	display: none;
@@ -1611,25 +2024,22 @@ margin-top: 250px;
 	font-size: 5em;
 }
 
-.product_icon {
-padding-top: 20px;
-}
+
 
 
 .adress_icon {
-	display: inline-flex;
-	justify-content:center;
-	margin-top: -3%;
-	margin-left: 2%;
+	/* width: calc(33.33% - 20px); */
+	margin-bottom: 15px; /* 모바일에서 위아래 간격 조정 */
 	padding: 1%;
-	line-height: 50px;
-	}
+	display: flex;
+	align-items: center;
+	line-height: 1.5;
+}
 
-.adress_icon img {
-	width: 45px;
-	height: 45px;
-	margin-right: 10px;
-	}
+.adress_icon i {
+	font-size: 27px;
+	margin-right: 20px; /* 아이콘과 텍스트 사이 간격 */
+}
 
 
 .회사소개_sub_text{
@@ -2203,13 +2613,11 @@ margin-left: 8%;
 @media (max-width:768px) {
 	/* 모바일 글자크기 */
 	p{
-		font-size: 0.85em;
-		line-height: 34px;
-		margin: 10px;
+		font-size: 1.1em;
+		line-height: 30px;
 		font-family: 'Noto Sans KR', sans-serif;
 	}
 
-	
 	.logo3 {
 		display: block;
 	}
@@ -2218,6 +2626,59 @@ margin-left: 8%;
 	.main_brand img{
 		width: 60%;
 	}
+
+
+	/* 회사개요 피시용 */
+	.alt-services .img-bg2 {
+		display: none;
+	  }
+	  
+	  .alt-services .img-bg {
+		display: none;
+	  }
+	  
+	/* 회사개요 모바일용 */
+	.ceo_sub_text{
+	margin: 15px;
+	}
+
+	/* 회사개요 이미지 모바일용 */
+	.img-bg_m{
+		padding: 150px;
+		max-width: 100%;
+		margin-top: -90px;
+		margin-bottom: 30px;
+		background: url(/assets/img/alt-services.gif);
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+		color: white;
+	}
+
+	/* 경영이념 이미지 모바일용 */
+	.img-bg2_m{
+		display: block;
+		padding: 160px;
+		background: url(/assets/img/alt-services-2.gif);
+		background-size: 170%;
+		background-repeat: no-repeat;
+		background-position: center;
+		margin-top: 10px;
+		margin-bottom: -40px;
+	}
+
+	/* 기술연구소 이미지 모바일용 */
+	.img-bg3_m{
+		display: block;
+		margin-top: -50px;
+		margin-bottom: 20px;
+		padding: 160px;
+		background: url(/assets/img/laboratory.png);
+		background-size: 100%;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+
+
 
 
 	/* 핵심제품 영역 */
@@ -2231,7 +2692,7 @@ margin-left: 8%;
 
 	/* 하단 온라인 상담 영역 */
 	.product_icon2 {
-		display: inline-flex;
+		display: flex;
 		justify-content: center;
 		align-items: center;
 		text-align: center;
@@ -2264,15 +2725,15 @@ margin-left: 8%;
 	min-height: 200px;
 	background: url('../img/dunes.jpg');
 	background-position: center top;
-	background-repeat: repeat-x;
+	background-repeat: repeat;
 	color: white;
-  
+
 	/* 수정된 스타일 */
 	background-attachment: fixed; /* 배경 이미지를 고정하여 스크롤 시 이미지가 움직이도록 설정 */
 	background-size: 200% auto; /* 배경 이미지의 가로 길이를 100%로 설정하고 세로는 원본 비율을 유지 */
-	transform: translateZ(0); /* GPU 가속화 사용을 위한 CSS 속성 */
-	background-position-y: calc(140% + 0px); /* 이미지를 아래로 150px 이동하여 아래쪽에 여백을 둠 */
-  }
+	transform: translatex(0); /* GPU 가속화 사용을 위한 CSS 속성 */
+	background-position-x: calc(100% + 350px); /* 이미지를 아래로 350px 이동하여 아래쪽에 여백을 둠 */
+}
   
   .payoff h1 {
 	text-transform: uppercase;
@@ -2280,8 +2741,6 @@ margin-left: 8%;
 	font-family: 'Roboto Condensed', sans-serif;
 	font-size: 2.8em;
   }
-
-
 
 
 
@@ -2302,9 +2761,138 @@ margin-left: 8%;
   }
 
 
+		/*--------------------------------------------------------------
+		# 연혁 Details Section
+		--------------------------------------------------------------*/
+  /* 기본 스타일 유지 */
+  .service-details .services-list {
+    max-width: 100%;
+    font-size: 18px;
+    padding: 0; /* 수정: 패딩 제거 */
+    border: 1px solid #d5d7da;
+    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5개의 열로 구성 */
+    grid-gap: 0; /* 수정: 간격 제거 */
+    position: relative; /* 추가: 가운데 선을 위한 기준 */
+  }
+
+  .service-details .services-list a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    border-left: 1px solid #d5d7da; /* 수정: 내부 경계선 */
+    margin: 0; /* 수정: 위아래 마진 제거 */
+    color: var(--color-secondary);
+    transition: 0.3s;
+    color: #838893;
+    text-decoration: none; /* 추가: 텍스트 밑줄 제거 */
+    overflow: hidden; /* 추가: 글자가 요소를 벗어나지 않도록 */
+    white-space: nowrap; /* 추가: 글자가 한 줄로 표시되도록 */
+  }
+
+  .service-details .services-list a:first-child {
+    border-left: none; /* 첫 번째 요소의 왼쪽 경계선 제거 */
+  }
+
+  .service-details .services-list a:last-child {
+    border-right: none; /* 마지막 요소의 오른쪽 경계선 제거 */
+  }
+
+  .service-details .services-list a:hover {
+    border-color: var(--color-primary);
+    color: #000;
+  }
+
+  /* 가로 가운데 선 스타일 추가 */
+  .service-details .services-list::before {
+    content: "";
+    position: absolute;
+    top: 50%; /* 가운데로 이동 */
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background-color: #d5d7da;
+  }
+
+  /* 우측 선 스타일 추가 */
+  .service-details .services-list::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 1px;
+    background-color: #d5d7da;
+  }
+
+  /* 추가: 2번째 줄의 스타일 */
+  .service-details .services-list:nth-child(2) {
+    grid-template-columns: repeat(4, 1fr); /* 4개의 열로 구성 */
+    grid-gap: 0; /* 간격 제거 */
+  }
+
+  /* 추가: 2번째 줄의 요소 스타일 */
+  .service-details .services-list:nth-child(2) a {
+    border-top: 1px solid #d5d7da; /* 위쪽 경계선 추가 */
+    border-bottom: 1px solid #d5d7da; /* 아래쪽 경계선 추가 */
+  }
+
+  /* 나머지 스타일 유지 */
+  .service-details .services-img {
+    margin-bottom: 20px;
+  }
+
+  .service-details h3 {
+    font-size: 42px;
+    font-weight: 700;
+  }
+
+  .service-details h4 {
+    text-align: left;
+    font-size: 25px;
+    font-weight: 700;
+  }
+
+  .service-details p {
+    margin-top: 20px;
+    text-align: left;
+    line-height: 27px;
+    font-size: 20px;
+  }
+
+  .service-details ul {
+    list-style: none;
+    padding: 0;
+    font-size: 15px;
+  }
+
+  .service-details ul li {
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .service-details ul i {
+    font-size: 20px;
+    color: var(--color-primary);
+  }
 
 
 
+
+
+  	  /* 회사 오시는길 아이콘 */
+		.container_street {
+			flex-direction: column; /* 모바일에서 세로로 나열 */
+		}
+
+		.adress_icon {
+			width: 100%;
+			margin: 30px;
+			align-items: flex-start; /* 모바일에서 좌측 정렬 */
+		}
 
 
   /* 서브 페이지 경로 여백 줄이기 */
@@ -2313,7 +2901,7 @@ margin-left: 8%;
   }
 
 
-/* 서브 페이지 상단 텍스트영역 */
+	/* 서브 페이지 상단 텍스트영역 */
 	/* 서브페이지 상단배너 삽입 문구 */
 	.company_intro_sub_black{
 		font-size: 25px;
@@ -2445,9 +3033,6 @@ margin-left: 8%;
 
 
 
-
-
-
 	/* 회사 CIBI 로고 페이지 이미지 크기 조정 */
 	.cibi_img img{
 		display: inline-flex;
@@ -2477,6 +3062,7 @@ margin-left: 8%;
 
 
 
+
 	/* 회사 오시는길 이미지 크기 조정 */
 	.street_img_company img{
 		display: inline-flex;
@@ -2497,38 +3083,27 @@ margin-left: 8%;
 		margin: 30px;
 	  }
 	  
-	  .회사소개_sub_text {
-		display: inline-block;
-		align-items: center;
-		text-align: left;
-		font-size: 12px;
-		font-weight: 400;
-		line-height: 40px;
-		color: #000000;
-		max-width: 1000px;
-	  }
 
-	  
 
 	/* 오시는 길 상단 카테고리 분류 */
-  .main3 .container4 {
-	width: 95%;
-	max-width: 95%;
-	margin: 0 auto;
-	margin-top: 0%;
-  }
+	.main3 .container4 {
+		width: 95%;
+		max-width: 95%;
+		margin: 0 auto;
+		margin-top: 0%;
+	}
 
 
 
-/* 분류 */
-.main3 .container3 {
-	width: 95%;
-	max-width: 95%;
-	margin: 0 auto;
-	margin-top: 3%;
-	font-size: 20px;
-	font-weight: 100;
-  }
+	/* 분류 */
+	.main3 .container3 {
+		width: 95%;
+		max-width: 95%;
+		margin: 0 auto;
+		margin-top: 3%;
+		font-size: 20px;
+		font-weight: 100;
+	}
 
 
 
@@ -2539,49 +3114,78 @@ margin-left: 8%;
 		justify-content: center; /* 수평 가운데 정렬 */
 		align-items: center; /* 수직 가운데 정렬 */
 		width: 100%;
+		margin-bottom: ;
 	}
 
-  
-  .business_sub_text {
-	margin-top: 10px;
-	font-size: 15px;
-	line-height: 20px;
-	text-align: left;
-  }
-  
- .business_intro_warm {
-	display: flex;
-	justify-content:left;
-	align-items: center;
-	text-align: left;
-	font-size: 20px;
-	font-weight: 700;
-	line-height: 35px;
-  }
-  
-  span .business_intro_text {
-	display: flex;
-	justify-content:left;
-	align-items: center;
-	font-size: 15px;
-	font-weight: 700;
-	line-height: 20px;
+
+	.business_sub_text2 {
+		display: inline-block;
+		justify-content: center;
+		align-items: center;
+		margin-top: 0px;
+		font-size: 13px;
+		line-height: 30px;
+		text-align: left;
+		max-width: 90%;
+	  }
+	  
+	  .business_intro_warm {
+		display: inline-block;
+		align-items: center;
+		max-width: 100%;
+		margin-top: -10px;
+		padding-bottom: 10px;
+		line-height: 37px;
+		text-align: left;
+		font-size: 24px;
+		font-weight: 700;
+	  }
+	  
+	  .business_intro_text {
+		display: inline-block;
+		align-items: center;
+		max-width: 100%;
+		text-align: left;
+		font-size: 15px;
+		font-weight: 400;
+		line-height: 24px;
+	  }
+
+	/* 사업영역 자세히 보기 버튼 */
+  .business_area_btn{
+	display: inline-block;
+	max-width: 100%;
+	text-align: right;
+	margin-top: -10px;
   }
 
-  
-  .business_img_wrapper {
-	width: 95%;
-	overflow: hidden;
-  }
-  
-  .business_img {
-	transition: transform 0.3s ease-in-out;
-  }
-  
-  .business_img_wrapper:hover .business_img {
-	transform: scale(1.04);
-  }
-  
+  	/* 사업영역 이미지 영역 */
+	.business_img_wrapper {
+		width: 95%;
+		overflow: hidden;
+		margin-top: -40px;
+	}
+	
+	.business_img {
+		transition: transform 0.3s ease-in-out;
+	}
+	
+	.business_img_wrapper:hover .business_img {
+		transform: scale(1.04);
+	}
+	
+
+  	/* 사업영역 디스플레이 사업, 디스플레이 b2b 비즈니스 영역 */
+	.portfolio_img {
+		flex-wrap: wrap;
+		margin: 0;
+	}
+
+	.portfolio_img .image_container {
+		width: 100%;
+		margin: 0 0 20px;
+	}
+	
 
 
 
@@ -2607,17 +3211,55 @@ margin-left: 8%;
 	}
 
 
-	.kle_text{
-		display: inline-block;
+
+	/* 모바일용 */
+	.kle_text_m{
+		display: block;
 		justify-content: center;
 		margin: 3%;
+		margin-top: -280px;
+		color: #343434;
+	  }
+
+	span.kle_text_m{
+		display: inline-block;
+		font-family: 'Gowun Batang', serif;
+		font-size: 25px;
+		color: #343434;
+		font-weight: 400;
+		line-height: 35px;
+		letter-spacing: -1px;
+		word-spacing:-2px;
+		font-style: italic;
+	  }
+
+	  span.kle_text_2_m{
+		display: block;
+		font-family: 'Gowun Batang', serif;
+		color: #d20000;
+		margin-top: 15px;
+		font-size: 36px;
+		font-weight: 800;
+		line-height: 47px;
+		letter-spacing: -1px;
+		word-spacing:-2px;
+		font-style: italic;
+	  }
+
+
+	/* 피시용 */
+	.kle_text{
+		display: none;
+		justify-content: center;
+		margin: 3%;
+		margin-top: -280px;
 		font-size: 25px;
 		color: #343434;
 	  }
 	
 	
 	  span.kle_text{
-		display: inline-block;
+		display: none;
 		font-family: 'Gowun Batang', serif;
 		font-size: 25px;
 		color: #343434;
@@ -2629,7 +3271,7 @@ margin-left: 8%;
 	  }
 	
 	  span.kle_text_2{
-		display: block;
+		display: none;
 		font-family: 'Gowun Batang', serif;
 		color: #d20000;
 		font-size: 38px;
@@ -2639,7 +3281,8 @@ margin-left: 8%;
 		font-style: italic;
 	  }
 
-	  
+
+	
 	.navbar-nav {
 		float: left;
 		text-align: left;
@@ -2661,6 +3304,7 @@ margin-left: 8%;
 	  .wrap {
 		height: 10px;
 		   }
+
 	   .wrap>.btn_shop {
 		 right: 12px;
 		 bottom: 30px;
@@ -2725,7 +3369,6 @@ margin-left: 8%;
 	display: inline-flex;
 	justify-content:center;
 	margin-top: -3%;
-	margin-left: 2%;
 	padding: 1%;
 	line-height: 50px;
 	}
@@ -2733,7 +3376,6 @@ margin-left: 8%;
 .adress_icon img {
 	width: 45px;
 	height: 45px;
-	margin-right: 10px;
 	}
 
 }
