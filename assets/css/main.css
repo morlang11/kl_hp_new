@@ -13,148 +13,6 @@
 
 
 
-/* 회사소개 페이지 최상단 텍스트 */
-
-.회사소개_main_text {
-  display: inline-block;
-  font-size: 38px;
-  font-weight: 600;
-  color: #000000;
-  margin-top: 30%;
-  margin-bottom: 10%;
-  margin: 30px;
-}
-
-.회사소개_sub_text {
-  display: inline-block;
-  align-items: center;
-  text-align: left;
-  font-size: 22px;
-  font-weight: 400;
-  line-height: 40px;
-  color: #000000;
-  max-width: 1000px;
-}
-
-.payoff_main_회사소개_bar {
-  margin-bottom: 4%;
-}
-
-
-/* 회사소개_CEO 인사말 */
-.ceo_main1_text {
-  margin-top: 30px;
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 30px;
-  text-align: left;
-}
-
-.ceo_main2_text {
-  margin-top: 30px;
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 20px;
-  text-align: left;
-}
-
-
-.ceo_sub_text {
-  margin-top: 30px;
-  font-size: 15px;
-  line-height: 30px;
-  text-align: left;
-}
-
-
-.company_intro_warm {
-  color: #e60012;
-  font-size: 24px;
-  font-weight: 700;
-}
-
-/* 대표싸인 */
-.ceo_sign_img_wrapper {
-  display: inline-block;
-}
-
-
-.ceo_sign_img{
-  text-align: right;
-  margin-top: 5%;
-  margin-right: 0%;
-}
-
-/* ci&bi*/
-.cibi_img_wrapper {
-  display: inline-block;
-}
-
-.cibi_img{
-  margin-top: -5%;
-  margin-right: 0%;
-}
-
-
-.cibi_sub_text {
-  max-width: 83%;
-  margin-left: 8%;
-  margin-top: 30px;
-  font-size: 15px;
-  line-height: 30px;
-  text-align: left;
-}
-
-.cibi_intro_warm {
-  font-size: 24px;
-  font-weight: 700;
-}
-
-
-
-/* 사업소개 이미지 */
-.business_img{
-  text-align: right;
-  margin-right: 0%;
-}
-
-/* ci&bi*/
-.business_img_wrapper {
-  display: inline-block;
-}
-
-.business_img{
-  margin-top: 0%;
-  margin-right: 0%;
-}
-
-
-.business_sub_text {
-  max-width: 83%;
-  margin-left: 8%;
-  margin-top: 30px;
-  font-size: 15px;
-  line-height: 30px;
-  text-align: left;
-}
-
-.business_intro_warm {
-  font-size: 24px;
-  font-weight: 700;
-}
-
-
-.business_img_wrapper {
-  overflow: hidden;
-}
-
-.business_img {
-  transition: transform 0.3s ease-in-out;
-}
-
-.business_img_wrapper:hover .business_img {
-  transform: scale(1.04);
-}
 
 
 /* 모바일용 */
@@ -190,10 +48,10 @@
     display: inline-block;
     align-items: center;
     text-align: left;
-    font-size:20px;
-    margin: 10px;
-    font-weight: 400;
+    font-size: 1em;
     line-height: 20px;
+    margin: 20px;
+    font-weight: 400;
     color: #000000;
     max-width: 1000px;
   }
@@ -383,6 +241,11 @@ section {
   [data-aos-delay] {
     transition-delay: 0 !important;
   }
+
+  
+
+
+
 }
 
 /*--------------------------------------------------------------
@@ -1238,6 +1101,8 @@ section {
 --------------------------------------------------------------*/
 
 
+/* 회사개요 파트 */
+/* 피시용 이미지 */
 /* 회사소개 이미지 */
 .alt-services .img-bg2 {
   background-size: cover;
@@ -1722,74 +1587,6 @@ section {
   padding: 0;
 }
 
-/*--------------------------------------------------------------
-# 연혁 Details Section
---------------------------------------------------------------*/
-.service-details .services-list {
-  max-width: 70%;
-  font-size: 20px;
-  padding: 10px 30px;
-  border: 1px solid #d5d7da;
-  margin-bottom: 30px;
-}
-
-.service-details .services-list a {
-  display: block;
-  line-height: 1;
-  font-size: 21px;
-  padding: 8px 10px 8px 10px;
-  border-left: 3px solid #d9e3e8;
-  margin: 15px 0px;
-  color: var(--color-secondary);
-  transition: 0.3s;
-  color: #838893;
-}
-
-
-
-.service-details .services-list a:hover {
-  border-color: var(--color-primary);
-  color: #000;
-}
-
-.service-details .services-img {
-  margin-bottom: 20px;
-}
-
-.service-details h3 {
-  font-size: 42px;
-  font-weight: 700;
-}
-
-.service-details h4 {
-  text-align: left;
-  font-size: 25px;
-  font-weight: 700;
-}
-
-.service-details p {
-  margin-top: 20px;
-  text-align: left;
-  line-height: 27px;
-  font-size: 20px;
-}
-
-.service-details ul {
-  list-style: none;
-  padding: 0;
-  font-size: 15px;
-}
-
-.service-details ul li {
-  padding: 5px 0;
-  display: flex;
-  align-items: center;
-}
-
-.service-details ul i {
-  font-size: 20px;
-  color: var(--color-primary);
-}
 
 /*--------------------------------------------------------------
 # Contact Section
@@ -2040,6 +1837,7 @@ section {
   .hero .info {
     padding: 0 50px;
   }
+  
 }
 
 .hero .info h2 {
