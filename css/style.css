@@ -2629,13 +2629,15 @@ margin-left: 8%;
 
 
 	/* 회사개요 피시용 */
-	.alt-services .img-bg2 {
+	.img-bg{
 		display: none;
 	  }
 	  
-	  .alt-services .img-bg {
+	.img-bg2{
 		display: none;
 	  }
+	  
+
 	  
 	/* 회사개요 모바일용 */
 	.ceo_sub_text{
@@ -2761,17 +2763,18 @@ margin-left: 8%;
   }
 
 
-		/*--------------------------------------------------------------
-		# 연혁 Details Section
-		--------------------------------------------------------------*/
+	/*--------------------------------------------------------------
+	# 연혁 Details Section
+	--------------------------------------------------------------*/
   /* 기본 스타일 유지 */
   .service-details .services-list {
+	display: grid;
+	margin-top: -80px;
+	margin-bottom: 60px;
     max-width: 100%;
-    font-size: 18px;
+    font-size: 17px;
     padding: 0; /* 수정: 패딩 제거 */
     border: 1px solid #d5d7da;
-    margin-bottom: 30px;
-    display: grid;
     grid-template-columns: repeat(5, 1fr); /* 5개의 열로 구성 */
     grid-gap: 0; /* 수정: 간격 제거 */
     position: relative; /* 추가: 가운데 선을 위한 기준 */
