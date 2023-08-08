@@ -2638,7 +2638,6 @@ margin-left: 8%;
 	  }
 	  
 
-	  
 	/* 회사개요 모바일용 */
 	.ceo_sub_text{
 	margin: 15px;
@@ -2646,6 +2645,7 @@ margin-left: 8%;
 
 	/* 회사개요 이미지 모바일용 */
 	.img-bg_m{
+		display: block;
 		padding: 150px;
 		max-width: 100%;
 		margin-top: -90px;
