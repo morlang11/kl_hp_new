@@ -1180,6 +1180,7 @@ cursor: pointer;
 
 
 #faq {
+  margin-top: 50px;
   padding-top: 0;
   padding-bottom: 0;
 }
@@ -1272,15 +1273,16 @@ cursor: pointer;
   
   /* faq 카테고리 박스 */
   .category .container4 {
-    width: 98%;
-    max-width: 98%;
+    width: 1150px;
+    max-width: 100%;
     margin: 0 auto;
-    margin-top: 1%;
+    margin-top: 3px;
+    margin-bottom: 30px;
     }
   
     .tab_btn4 {
     display: flex;
-    max-width: 1000px;
+    max-width: 1150px;
     margin: 1em auto;
     }
     .tab_btn4 > li {
@@ -1331,6 +1333,9 @@ cursor: pointer;
 
 
     @media (max-width:768px) {
+
+
+      
     /* 검색창 디자인 */
 .search-container {
   display: inline-flex;
@@ -1367,7 +1372,92 @@ cursor: pointer;
   padding-bottom: 0;
 }
 
+
+
+/* faq 안에 내용 */
+/* 제품 설치 방법 그림 */
+.install_product{
+  display: inline-block;
+  justify-content: center;
+  margin-top: 20px;
+  }
+  
+  /* 제품 설치 방법 제목 */
+  span.install_product_text_main{
+    display: inline-block;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    font-size: 28px;
+    font-weight: 600;
+  }
+  
+  
+  span.install_product_text_sub{
+    font-size: 22px;
+    font-weight: 600;
+  }
+  
+  /* faq 카테고리 박스 */
+  .category .container4 {
+    width: 1150px;
+    max-width: 100%;
+    margin: 0 auto;
+    margin-top: 3px;
+    margin-bottom: 30px;
     }
+  
+    .tab_btn4 {
+    display: flex;
+    max-width: 95%;
+    margin: 1em auto;
+    }
+    .tab_btn4 > li {
+    position: relative;
+    }
+    .tab_btn4 > li > a {
+    display: block;
+    text-align: center;
+    color: #6b6b6b;
+    }
+    .tab_btn4 > li > a.active {
+    font-weight: bold;
+    color: #c1c1c1;
+    }
+    .tab_btn4.tp-box > li {
+    flex: 1;
+    margin-left: -1px;
+    border: 1px solid #b1b1b1;
+    }
+    .tab_btn4.tp-box > li > a {
+    width: 100%;
+    padding: 0.9em 0.5em;
+    }
+    .tab_btn4.tp-box > li > a.active {
+    height: 100%;
+    background-color: #bdbdbd;
+    color: white;
+    }
+    .tab_btn4.tp-bar {
+    justify-content: center;
+    border-bottom: 1px solid #DDD;
+    }
+    .tab_btn4.tp-bar > li {
+    margin: 2em 0 1em;
+    border-left: 1px solid #DDD;
+    }
+    .tab_btn4.tp-bar > li:last-child {
+    border-right: 1px solid #DDD;
+    }
+    .tab_btn4.tp-bar > li > a {
+    padding: 0 2em;
+    }
+    .tab_btn4.tp-bar > li > a.active {
+    font-weight: bold;
+    font-size: 20px;
+    color: #b1b1b1;
+    }
+
+}
 
 
 

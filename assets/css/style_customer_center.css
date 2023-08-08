@@ -56,7 +56,7 @@ section { overflow: hidden; }
 .as_text_1{
     display: flex;
     justify-items: end;
-    font-size: 33px;
+    font-size: 30px;
     margin-left: 10px;
     margin-top: 50px;
     margin-bottom: 10px;
@@ -68,8 +68,8 @@ section { overflow: hidden; }
 .as_text_2{
     display: flex;
     justify-items: end;
-    font-size: 25px;
-    margin-left: 10px;
+    font-size: 22px;
+    margin-left: -15px;
     margin-bottom: 20px;
     font-weight: 700;
     text-align: left;
@@ -78,7 +78,8 @@ section { overflow: hidden; }
 
 .as_text_3{
     display: block;
-    font-size: 20px;
+    margin-left: -25px;
+    font-size: 17px;
     text-align: left;
     line-height: 30px;
 }
@@ -1076,6 +1077,7 @@ tems Section style
     width: 600px;
     height: 365px;
 }
+
 .choose_mac .choose_slide {
     width: 76%;
     margin: 0 auto;
@@ -1087,8 +1089,8 @@ tems Section style
 .choose_mac .choose_item img{
     width: 100%;
     display: inline-block;
-    margin-left: 10px;
-    margin-top: 15px;
+    margin-top: 45px;
+    margin-left: 40px;
 }
 .choose_item_text h6{
     font-weight: 700;
@@ -1100,6 +1102,125 @@ tems Section style
 .choose_item_text p{
     margin-left: 27px;
 }
+
+
+@media (max-width:768px) {
+    
+    .choose_mac {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        justify-content: center;
+        max-width: 100%;
+        margin-bottom: -150px;
+      }
+    
+      .choose_mac .choose_slide {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .choose_item {
+        max-width: 100%;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+  .choose_item_img {
+    width: 95%; /* 이미지 크기를 화면의 95%로 채워지도록 수정 */
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  .choose_item_img img {
+    width: 100%;
+    height: auto;
+  }
+
+    .choose_mac .choose_item {
+        background-position: center;
+        max-width: 100%;
+        margin-top: -100px;
+    }
+
+    .choose_mac .choose_item img{
+        width: 150%;
+        display: inline-flex;
+        justify-content: center;
+        margin-bottom: -100px;
+        margin-left: 0px;
+    }
+
+    .choose_item_text h6{
+        font-weight: 700;
+        font-size: 16px;
+    }
+
+    .choose_item_text h6 i{
+        margin-right:10px;
+    }
+
+    .choose_item_text p{
+        margin-left: 27px;
+    }
+
+/*heading title all area*/
+.head_title{
+    padding-bottom: 2.143rem;
+    overflow: hidden;
+}
+.head_title h2{
+    font-weight: 400;
+    font-size: 2.250rem;
+    border-left: 4px solid #e60012;
+    padding-left: 5px;
+    margin-left: 10px;
+    margin-bottom: -30px;
+}
+.head_title h2 strong{
+    font-weight: 700;
+}
+  .head_title h5{
+    font-weight: 400;
+    font-size: 1.125rem;
+    color:#999999;
+}
+
+.as_text_1{
+    display: flex;
+    justify-items: end;
+    font-size: 25px;
+    margin-left: 10px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    text-align: left;
+    line-height: 30px;
+}
+
+.as_text_2{
+    display: flex;
+    justify-items: end;
+    font-size: 22px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-align: left;
+    margin-left: -10px;
+    line-height: 30px;
+}
+
+.as_text_3{
+    display: block;
+    margin-left: -20px;
+    font-size: 16px;
+    text-align: left;
+    line-height: 30px;
+}
+}
+
+
+
+
 
 
 /*========================================================================
