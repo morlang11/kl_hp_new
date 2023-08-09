@@ -1116,7 +1116,7 @@ tems Section style
       }
     
       .choose_mac .choose_slide {
-        width: 95%;
+        width: 97%;
         margin: 0 auto;
     }
 
@@ -1127,7 +1127,7 @@ tems Section style
       }
 
   .choose_item_img {
-    width: 95%; /* 이미지 크기를 화면의 95%로 채워지도록 수정 */
+    width: 98%; /* 이미지 크기를 화면의 95%로 채워지도록 수정 */
     margin: 0 auto;
     overflow: hidden;
   }
