@@ -2340,105 +2340,6 @@ margin: 5em;
 
 
 
-/*--------------------------------------------------------------
-# Footer
---------------------------------------------------------------*/
-#footer {
-	color: #4b4b4b;
-	font-size: 11px;
-	text-align: left;
-	line-height: 30px;
-	padding: 50px 0;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-  }
-  
-  #footer .container {
-	display: flex;
-	align-items: center;
-  }
-  
-  #footer .footer-left {
-	margin-right: 20px;
-  }
-  
-  #footer .footer-left img {
-	max-width: 150px; /* 로고 이미지의 크기를 300px로 설정 */
-  }
-  
-  #footer .footer-right {
-	flex: 1;
-	margin-left: 30px; /* 회사 정보와 로고 이미지 사이의 간격을 30px로 설정 */
-  }
-
-
-  @media (max-width: 768px) {
-	#footer .container {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		text-align: center;
-	  }
-	  
-	  
-	  #footer .footer-left {
-		margin-bottom: 10px;
-	  }
-
-		#footer .footer-right p {
-			font-size: 11px;
-			margin-bottom: 10px;
-		}
-	  
-	  #footer .footer-right p::before {
-		content: attr(data-content);
-		font-size: 11px;
-		margin-bottom: 10px;
-	  }
-	  
-	  #footer .footer-right p::after {
-		content: "";
-		display: block;
-		font-size: 11px;
-	  }
-  }
-  
-
-  /*--------------------------------------------------------------
-# Footer(sub)
---------------------------------------------------------------*/
-#footer_sub {
-	color: #4b4b4b;
-	font-size: 11px;
-	text-align: left;
-	line-height: 30px;
-	padding: 50px 0;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-  }
-  
-  #footer_sub .container_sub {
-	display: flex;
-	align-items: center;
-  }
-  
-  #footer_sub .footer-left_sub {
-	margin-right: 20px;
-  }
-  
-  #footer_sub .footer-left_sub img {
-	max-width: 150px; /* 로고 이미지의 크기를 300px로 설정 */
-  }
-  
-  #footer_sub .footer-right_sub {
-	flex: 1;
-	margin-left: 30px; /* 회사 정보와 로고 이미지 사이의 간격을 30px로 설정 */
-  }
-
-
-
 
 .get-it{
 	padding: 100px 0px 160px 0px;
@@ -3234,6 +3135,7 @@ margin-left: 8%;
 		overflow: hidden;
 		height: 100%; /* 이미지 박스 높이 고정 */
 		margin-top: -40px;
+		margin-bottom: -2px;
 	 }
 	
 	 .business_img {
@@ -3576,3 +3478,86 @@ header, .social{
     	color: white;
     }
 }
+
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#footer2 {
+    display: inline-flex;
+    color: #4b4b4b;
+    font-size: 11px;
+    text-align: left;
+    line-height: 30px;
+    padding: 50px 0;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer_brank {
+    display: inline-block;
+    font-size: 12px;
+    color: #565656;
+    margin-right: 12px;
+  }
+
+  .footer_paragraph {
+    margin: -2px 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    #footer2 {
+      display: inline-block;
+      font-size: 0px;
+    }
+
+    .footer_paragraph {
+      margin: 5px 0;
+      text-align: center;
+    }
+
+    .footer-left2,
+    .footer-right2 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .footer_logo2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .footer_logo2 img {
+      width: 150px;
+      margin-bottom: 20px;
+    }
+
+    .footer-right2 {
+      margin-left: 30px;
+      margin-right: 20px;
+    }
+
+    .footer_brank {
+      line-height: 3px;
+    }
+
+    .footer_paragraph {
+      margin: -2px 0;
+    }
+  }
+
+  @media screen and (min-width: 769px) {
+    .footer_logo2 img {
+      width: 150px; /* 이미지 크기 수정 */
+    }
+
+    .footer-right2 {
+      margin-left: 50px; /* 왼쪽 마진 수정 */
+      margin-right: 30px; /* 오른쪽 마진 수정 */
+    }
+  }
+
+  
