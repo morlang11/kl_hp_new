@@ -2575,13 +2575,13 @@ margin-left: 8%;
 	/* 경영이념 이미지 모바일용 */
 	.img-bg2_m{
 		display: block;
-		padding: 160px;
+		padding: 200px;
 		background: url(/assets/img/alt-services-2.gif);
 		background-size: 170%;
 		background-repeat: no-repeat;
 		background-position: center;
-		margin-top: 10px;
-		margin-bottom: -40px;
+		margin-top: -20px;
+		margin-bottom: -80px;
 	}
 
     /* 기술연구소 이미지 모바일용 */
