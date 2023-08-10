@@ -207,7 +207,7 @@ span.date{
 /* 검색창 디자인 */
 .search-container-news{
   display: inline-flex;
-  width: 280px;
+  max-width: 280px;
   height: 40px;
   border: 1px solid #c00000;
   background: #c00000;
