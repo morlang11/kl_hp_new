@@ -2584,18 +2584,16 @@ margin-left: 8%;
 		margin-bottom: -40px;
 	}
 
-	/* 기술연구소 이미지 모바일용 */
-	.img-bg3_m{
+    /* 기술연구소 이미지 모바일용 */
+    .img-bg3_m {
 		display: block;
 		margin-top: -50px;
 		margin-bottom: 20px;
 		padding: 160px;
-		background: url(/assets/img/laboratory.png);
 		background-size: 100%;
 		background-repeat: no-repeat;
 		background-position: center;
-	}
-
+	  }
 
 
 
