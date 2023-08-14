@@ -1118,26 +1118,52 @@
 
 /* 검색시 일치하는 내용없음 이미지 */
 .no-match-message{
-  display: none; color: rgb(57, 57, 57);  text-align: center; margin-bottom: 80px;
+  display: inline-block;
+  width: 100%;
 }
 
 
 .search_no_match {
-  display: none;
+  display: block;
+  width: 100%;
   justify-content: center;
   align-items: center;
-  width: 100%;
   text-align: center;
-  display: flex;
-  justify-content: center;
-  margin-top: 40px;
-  margin-bottom: 20px;
 }
 
 
-/* 가로스크롤 추가 */
-.collapse {width:100%;overflow:auto;}
-div table {border-collapse:collapse}
+.search_no_match_txt {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 60px;
+  color: rgb(57, 57, 57);
+  text-align: center;
+}
+
+
+
+/* 유튜브 영상 가로스크롤 제거 및 너비, 높이 조정 */
+.video-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 56.25%; /* 16:9 비율의 높이를 유지하도록 설정 */
+  margin-top: 20px; /* 여기서 margin-top 추가 */
+}
+.video-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 768px) {
+  /* PC 환경에서의 높이 설정 */
+  .video-container {
+    padding-top: 31.25%; /* 16:9 비율의 높이를 유지하도록 설정 */
+  }
+}
 
 
 /* 검색안됨 */
@@ -1150,33 +1176,50 @@ div table {border-collapse:collapse}
   color: #717171;
 }
 
+
+
 /* 검색창 디자인 */
 .search-container {
-  display: inline-flex;
-  justify-items: flex-end;
-  justify-content: flex-end;
-  height: 40px;
-  width: 380px;
-  border: 1px solid #c00000;
-  background: #c00000;
-  margin-bottom: 2%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 500px; /* PC 환경에서의 최대 너비 */
+  margin: 0 auto; /* 가운데 정렬 */
+  background: #f2f2f2;
+  padding: 10px 20px; /* 상하 10px, 좌우 20px */
+  border-radius: 20px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 0px;
 }
 
 input {
   font-size: 16px;
-  width: 335px;
-  padding: 10px;
-  border: 0px;
+  flex: 1;
+  border: 0;
   outline: none;
-  float: left;
+  padding: 10px;
+  background: transparent;
+  border-radius: 20px;
 }
 
 button {
-width: 50px;
-height: 100%;
-border: 0px;
-cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  background: #c00000;
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px; /* 여백 추가 */
+  margin-bottom: 0px;
 }
+
+
+
 
 
 #faq {
@@ -1333,43 +1376,26 @@ cursor: pointer;
 
     @media (max-width:768px) {
 
+   /* faq 검색영역 여백 */
+      .search-container_margin{
+        display: inline-flex;
+        max-width: 100%; /* 모바일 환경에서의 최대 너비 */
 
-      
-    /* 검색창 디자인 */
-.search-container {
-  display: inline-flex;
-  justify-items: flex-end;
-  justify-content: flex-end;
-  margin-top: 30px;
-  height: 40px;
-  width: 380px;
-  border: 1px solid #c00000;
-  background: #c00000;
-  margin-bottom: 2%;
-}
+      }
 
-input {
-  font-size: 16px;
-  width: 335px;
-  padding: 10px;
-  border: 0px;
-  outline: none;
-  float: left;
-}
+   /* faq 검색영역 */
+   .search-container {
+    max-width: 100%; /* 모바일 환경에서의 최대 너비 */
+    flex-wrap: wrap; /* 요소들을 줄바꿈 */
+    margin: 10px;
+  }
+  input {
+    margin-bottom: -5x; /* 검색창과 버튼 사이 간격 추가 */
+  }
+  button {
+    margin-left: auto; /* 버튼을 우측에 위치 */
+  }
 
-button {
-width: 50px;
-height: 100%;
-border: 0px;
-cursor: pointer;
-}
-
-
-#faq {
-  margin-top: 30px;
-  padding-top: 0;
-  padding-bottom: 0;
-}
 
 
 
