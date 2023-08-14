@@ -2237,12 +2237,12 @@ height: 30px;
 margin: 5em;
 }
 
-/* 연혁부분 로고이미지 */
+
 /* 연혁부분 로고이미지 */
 .logo-kleinz {
 	display: inline-block; /* Change display to inline-block */
 	max-height: 20px;
-	background-image: url(/img/kleinz.png); /* Change content to background-image */
+	content: url(/img/kleinz.png); /* Change content to background-image */
 	background-size: contain;
 	background-repeat: no-repeat;
 	margin-right: 5px; /* Add margin-right to separate from text */
@@ -2252,7 +2252,7 @@ margin: 5em;
   .logo-karena {
 	display: inline-block; /* Change display to inline-block */
 	max-height: 16px;
-	background-image: url(/img/karena.png); /* Change content to background-image */
+	content: url(/img/karena.png); /* Change content to background-image */
 	background-size: contain;
 	background-repeat: no-repeat;
 	margin-right: 5px; /* Add margin-right to separate from text */
@@ -2262,7 +2262,7 @@ margin: 5em;
   .logo-einz {
 	display: inline-block; /* Change display to inline-block */
 	max-height: 20px;
-	background-image: url(/img/einz.png); /* Change content to background-image */
+	content: url(/img/einz.png); /* Change content to background-image */
 	background-size: contain;
 	background-repeat: no-repeat;
 	margin-right: 5px; /* Add margin-right to separate from text */
