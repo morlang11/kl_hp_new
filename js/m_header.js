@@ -46,3 +46,38 @@ document.addEventListener("DOMContentLoaded", function () {
         closeOtherDropdowns(null);
     });
 });
+
+
+
+
+//모바일 세로형 서브메뉴 드롭다운
+document.addEventListener("DOMContentLoaded", function () {
+    const menuItems = document.querySelectorAll(".menu-item");
+
+    menuItems.forEach(function (menuItem) {
+        const menuTitle = menuItem.querySelector(".menu_title");
+        const submenu = menuItem.querySelector(".submenu");
+        const allSubmenus = document.querySelectorAll(".submenu");
+        
+        menuTitle.addEventListener("click", function () {
+            // 모든 메뉴 타이틀에서 active 클래스 제거
+            menuItems.forEach(function (item) {
+                item.querySelector(".menu_title").classList.remove("active");
+            });
+
+            allSubmenus.forEach(function (otherSubmenu) {
+                if (otherSubmenu !== submenu) {
+                    otherSubmenu.style.height = "0"; // 다른 서브메뉴 닫기
+                }
+            });
+
+            if (submenu.style.height === "0px") {
+                submenu.style.height = "250px";
+                menuTitle.classList.add("active"); // 클래스 추가
+            } else {
+                submenu.style.height = "0";
+            }
+        });
+    });
+});
+

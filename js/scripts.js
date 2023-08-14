@@ -202,4 +202,20 @@ $(window).scroll(function (event) {
 
 
 
-
+	// 모바일에서도 스크롤 이벤트를 감지하여 이미지가 움직이도록 수정한 내용
+	var lastYPos = 0;
+	$(window).on('touchmove', function (event) {
+	  var yPos = event.originalEvent.touches[0].clientY;
+	  if (yPos > lastYPos) {
+		// 아래로 스크롤하는 경우
+		var backgroundPositionY = $('.payoff').css('background-position-y');
+		var newPos = parseFloat(backgroundPositionY) - 1;
+		$('.payoff').css('background-position-y', newPos + 'px');
+	  } else {
+		// 위로 스크롤하는 경우
+		var backgroundPositionY = $('.payoff').css('background-position-y');
+		var newPos = parseFloat(backgroundPositionY) + 1;
+		$('.payoff').css('background-position-y', newPos + 'px');
+	  }
+	  lastYPos = yPos;
+	});
