@@ -67,12 +67,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
             allSubmenus.forEach(function (otherSubmenu) {
                 if (otherSubmenu !== submenu) {
-                    otherSubmenu.style.height = "0"; // 다른 서브메뉴 닫기
+                    otherSubmenu.style.height = "0px"; // 다른 서브메뉴 닫기
                 }
             });
 
             if (submenu.style.height === "0px") {
-                submenu.style.height = "250px";
+                submenu.style.height = "240px";
                 menuTitle.classList.add("active"); // 클래스 추가
             } else {
                 submenu.style.height = "0";

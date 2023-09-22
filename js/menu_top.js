@@ -41,3 +41,16 @@ $(document).ready(function(){
       }
     })
   })
+
+
+
+
+// 언어 선택시 해당 언어 홈페이지 이동(한국어/영어)
+	document.getElementById("korean-button").addEventListener("click", function () {
+		window.location.href = "./index.html";
+	});
+	
+
+	document.getElementById("english-button").addEventListener("click", function () {
+		window.location.href = "./index_en.html";
+	});
